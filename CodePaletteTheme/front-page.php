@@ -140,8 +140,13 @@
 
       <!-- モーダル本体 -->
       <?php
-      if ($works_query->have_posts()):
-        while ($works_query->have_posts()): $works_query->the_post();
+      $args = array(
+          'post_type' => 'works',
+          'posts_per_page' => -1
+      );
+      $works_query_modal = new WP_Query($args);
+      if ($works_query_modal->have_posts()):
+        while ($works_query_modal->have_posts()): $works_query_modal->the_post();
         $modal_id = 'modal-' . get_the_ID();
       ?>
       <div class="works__modal works-modal js-works-modal" data-modal-id="<?php echo $modal_id; ?>">
@@ -180,6 +185,7 @@
 
     </div>
   </section>
+
 
 
   <!-- Service サービス -->
