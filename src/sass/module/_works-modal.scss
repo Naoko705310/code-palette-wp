@@ -1,9 +1,10 @@
 @use "global" as *;
+
 // 制作実績のモーダル
 
-// 全画面のモーダル（黒）
+// 全画面のモーダル（黒背景＋非表示）
 .works-modal {
-  display: none; //初期状態で非表示
+  display: none; // 初期状態で非表示
   position: fixed;
   top: 0;
   left: 0;
@@ -14,22 +15,23 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   padding-right: rem(15);
   padding-left: rem(15);
+  
   @include mq(md) {
     padding-right: rem(25);
     padding-left: rem(25);
   }
 }
 
-// is-active付与時にモーダルを展開
+// モーダルを表示状態にするクラス
 .works-modal.is-active {
   display: block;
 }
 
-// 展開する白い部分
+// モーダルの白い中身
 .works-modal__inner {
   width: min(90vw, 630px);
   max-height: 90vh;
-  overflow-y: auto; // 縦方向のスクロールを有効にする
+  overflow-y: auto;
   background: $white;
   padding: rem(25) rem(15);
   border-radius: rem(8);
@@ -37,11 +39,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1001; // モーダルの内側の部分が最前面に表示されるように
+  z-index: 1001;
+
   @include mq(md) {
     width: min(90vw, 1080px);
     padding: rem(80);
   }
+}
+
+// モーダルを開いているときのbodyスクロール無効化
+body.works-modal__open {
+  overflow: hidden;
 }
 
 // 閉じるボタン
@@ -52,15 +60,15 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1002; // 閉じるボタンが最前面に表示されるように
-}
+  z-index: 1002;
 
-.works-modal__close01,
-.works-modal__close02 {
-  position: absolute;
-  width: 2px;
-  height: 20px;
-  background: #000;
+  span {
+    display: block;
+    width: rem(20);
+    height: rem(2);
+    background: #000;
+    margin: rem(4) 0;
+  }
 }
 
 .works-modal__close01 {
@@ -71,22 +79,23 @@
   transform: rotate(-45deg);
 }
 
-// Works 「制作実績詳細」
+// モーダル見出し
 .works-modal__heading {
-text-align: center;
+  text-align: center;
 }
 
 .works-modal__heading-en {
-display: block;
-font-family: $second-font-family;
-font-size: rem(32);
-color: $green;
-font-weight: $normal;
-line-height: calc(40/32);
-@include mq(md) {
-  font-size: rem(40);
-  line-height: calc(40/40);
-}
+  display: block;
+  font-family: $second-font-family;
+  font-size: rem(32);
+  color: $green;
+  font-weight: $normal;
+  line-height: calc(40 / 32);
+
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: calc(40 / 40);
+  }
 }
 
 .works-modal__heading-jp {
@@ -94,16 +103,16 @@ line-height: calc(40/32);
   font-size: rem(12);
   color: $color-font;
   font-weight: $normal;
-  line-height: calc(18/12);
+  line-height: calc(18 / 12);
   display: block;
   margin-top: rem(8);
 }
 
-// 画像とタイトル
+// カード（画像とタイトルなど）
 .works-modal__card {
   text-align: center;
   margin-top: rem(40);
-  transition: background-color 0.3s ease; // 背景色の変化にアニメーションを適用
+  transition: background-color 0.3s ease;
 }
 
 .works-modal__image-wrapper {
@@ -113,7 +122,8 @@ line-height: calc(40/32);
 .works-modal__image-wrapper::before {
   content: "";
   display: block;
-  padding-top: 50%;// height/width
+  padding-top: 50%;
+
   @include mq(md) {
     padding-top: 40%;
   }
@@ -130,11 +140,11 @@ line-height: calc(40/32);
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
+
   @include mq(md) {
     max-width: 60%;
   }
 }
-
 
 .works-modal__card h3 {
   font-family: $base-font-family;
@@ -143,6 +153,7 @@ line-height: calc(40/32);
   font-weight: $bold;
   line-height: 1.5;
   margin-top: rem(10);
+
   @include mq(md) {
     font-size: rem(20);
   }
@@ -156,14 +167,14 @@ line-height: calc(40/32);
   line-height: 1.5;
   display: block;
   margin-top: rem(10);
+
   @include mq(md) {
     font-size: rem(16);
   }
-}
 
-.works-modal__card a:hover
-{
-  color: $green;
+  &:hover {
+    color: $green;
+  }
 }
 
 // ユーザー名・パスワード
@@ -180,21 +191,21 @@ line-height: calc(40/32);
   display: block;
 }
 
-// 実績詳細
+// 詳細（テーブル形式）
 .works-modal__details {
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(16);
   margin-top: rem(40);
+
   @include mq(md) {
-  grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-// PCの時、「制作背景」のみをgridの左右にまたがって表示する（grid二つ分）
 .works-modal__details-wrapper:last-child {
   @include mq(md) {
-  grid-column: span 2;
+    grid-column: span 2;
   }
 }
 
@@ -208,9 +219,10 @@ line-height: calc(40/32);
   padding: rem(5) rem(10);
   border-radius: rem(4);
   line-height: 1.5;
-    @include mq(md) {
+
+  @include mq(md) {
     font-size: rem(16);
-    }
+  }
 }
 
 .works-modal__text {
@@ -222,14 +234,8 @@ line-height: calc(40/32);
   margin-top: rem(16);
 }
 
-// モーダル展開時に、背景をスクロールさせない
-.works-modal__open {
-  overflow: hidden;
-}
-
+// 実績一覧に戻るボタン
 .works-modal__button-to-list {
   margin-top: rem(40);
   text-align: center;
 }
-
-// キーボードフォーカス時のスタイル

@@ -60,6 +60,7 @@
 .works-card__heading {
   font-size: rem(18);
   font-weight: $bold;
+  text-align: center;
   @include mq(md) {
     font-size: rem(20);
   }
@@ -69,6 +70,7 @@
   font-size: rem(16);
   font-weight: $normal;
   margin-top: rem(4);
+  text-align: center;
 }
 
 // キーボードフォーカスが当たった時のスタイル

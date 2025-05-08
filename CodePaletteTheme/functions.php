@@ -72,7 +72,7 @@ add_action('wp_enqueue_scripts', 'add_theme_scripts');
 /* --------------------------------------------
 /* // ログイン中でも管理バーを非表示にする
 /* -------------------------------------------- */
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 
 /* --------------------------------------------
@@ -95,3 +95,24 @@ function my_setup()
   );
 }
 add_action('after_setup_theme', 'my_setup');
+
+/* --------------------------------------------
+/* 制作実績のカスタム投稿タイプ
+/* -------------------------------------------- */
+function custom_post_type() {
+  register_post_type('works',
+      array(
+          'labels' => array(
+              'name' => __('制作実績'),
+              'singular_name' => __('制作実績')
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'menu_position' => 5,
+          'supports' => array('title', 'editor', 'thumbnail', 'excerpt'), // ← ここに excerpt を追加
+          'show_in_rest' => true, // Gutenbergを使う場合は必要
+      )
+  );
+}
+add_action('init', 'custom_post_type');
+

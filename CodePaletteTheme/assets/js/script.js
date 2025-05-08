@@ -69,26 +69,55 @@ jQuery(function ($) {
   /* --------------------------------------------
   /* 制作実績のモーダル
   /* -------------------------------------------- */
-  // モーダルを開くためのイベントハンドラ
-  $('.works__item a').on('click', function (event) {
-    // buttonをaタグに変更
-    event.preventDefault();
-    var modalId = $(this).data('modal');
-    $('.works-modal[data-modal-id="' + modalId + '"]').fadeIn().addClass('is-active');
-    $('body').addClass('works-modal__open'); // body にクラスを追加してスクロールを無効化
+  // モーダルを開く
+  document.querySelectorAll('.works__item a').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      e.preventDefault();
+      var modalId = this.dataset.modal;
+      var modal = document.querySelector('.works-modal[data-modal-id="' + modalId + '"]');
+      if (modal) {
+        modal.classList.add('is-active');
+      }
+    });
   });
 
-  // モーダルを閉じるためのイベントハンドラ（閉じるボタン）
-  $('.js-works-modal__close-button').on('click', function () {
-    $(this).closest('.works-modal').fadeOut().removeClass('is-active');
-    $('body').removeClass('works-modal__open'); // body からクラスを削除してスクロールを有効化
+  // モーダルを閉じる（閉じるボタン）
+  document.querySelectorAll('.js-works-modal__close-button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      this.closest('.works-modal').classList.remove('is-active');
+    });
   });
 
-  // モーダル全体をクリックしたときにモーダルを閉じる
-  $('.works-modal').on('click', function () {
-    $(this).fadeOut().removeClass('is-active');
-    $('body').removeClass('works-modal__open'); // body からクラスを削除してスクロールを有効化
+  // モーダルを閉じる（背景をクリックしたとき）
+  document.querySelectorAll('.works-modal').forEach(function (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.classList.remove('is-active');
+      }
+    });
   });
+
+  // WP化する前のコード↓
+  // // モーダルを開くためのイベントハンドラ
+  // $('.works__item a').on('click', function(event) { // buttonをaタグに変更
+  //   event.preventDefault();
+  //   var modalId = $(this).data('modal');
+  //   $('.works-modal[data-modal-id="' + modalId + '"]').fadeIn().addClass('is-active');
+  //   $('body').addClass('works-modal__open'); // body にクラスを追加してスクロールを無効化
+  // });
+
+  // // モーダルを閉じるためのイベントハンドラ（閉じるボタン）
+  // $('.js-works-modal__close-button').on('click', function() {
+  //   $(this).closest('.works-modal').fadeOut().removeClass('is-active');
+  //   $('body').removeClass('works-modal__open'); // body からクラスを削除してスクロールを有効化
+  // });
+
+  // // モーダル全体をクリックしたときにモーダルを閉じる
+  // $('.works-modal').on('click', function() {
+  //     $(this).fadeOut().removeClass('is-active');
+  //     $('body').removeClass('works-modal__open'); // body からクラスを削除してスクロールを有効化
+  //   }
+  // );
 
   /* --------------------------------------------
   /* TOPへ戻るボタン
