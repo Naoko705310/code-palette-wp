@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.footer {
+  height: rem(90);
+  background-color: $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__inner {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.footer__contents-wrapper p {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $white;
+  font-weight: $normal;
+}

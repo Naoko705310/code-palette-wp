@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.service-card {
+  height: 100%;
+  border-radius: 3%;
+  padding: rem(20);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.40);
+}
+
+.service-card--01 {
+  background-color: $green;
+}
+
+.service-card--02 {
+  background-color: $white;
+}
+.service-card--03 {
+  background-color: $pink;
+}
+.service-card--04 {
+  background-color: $gray;
+}
+
+.service-card:hover  {
+  cursor: pointer;
+}
+
+.service-card__title {
+  font-family: $second-font-family;
+  font-size: rem(80);
+  font-weight: $bold;
+  color: $gray-light;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.6s ease;
+  position: absolute;
+  top: rem(20);
+  left: 60%;
+  display: block;
+}
+
+.service-card--01:hover .service-card__title {
+  left: 0;
+  color: $pink;
+}
+.service-card--02:hover .service-card__title {
+  left: 0;
+  color: $pink;
+}
+.service-card--03:hover .service-card__title {
+  left: 0;
+  color: $green;
+}
+.service-card--04:hover .service-card__title {
+  left: 0;
+  color: $pink;
+}
+
+.service-card__title-sub {
+  font-size: rem(24);
+  color: $color-font;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  margin-top: auto;
+  padding-top: 30%;
+}
+
+.service-card__title-sub--remark {
+  display: inline-block;
+  font-size: rem(18);
+}
+
+.service-card--01 .service-card__title-sub {
+  color: $white;
+}
+.service-card--02 .service-card__title-sub {
+  color: $color-font;
+}
+.service-card--03 .service-card__title-sub {
+  color: $color-font;
+}
+.service-card--04 .service-card__title-sub {
+  color: $white;
+}
+
+.service-card__text {
+  font-size: rem(16);
+  color: $color-font;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  margin-top: rem(20);
+}
+
+.service-card--01 .service-card__text {
+  color: $white;
+  }
+  .service-card--02 .service-card__text {
+  color: $color-font;
+  }
+  .service-card--03 .service-card__text {
+  color: $color-font;
+  }
+  .service-card--04 .service-card__text {
+  color: $white;
+  }

@@ -1,0 +1,41 @@
+// @use "global" as *;
+
+// .price {
+//   margin-top: rem(80);
+//   @include mq(md) {
+//     margin-top: rem(140);
+//   }
+// }
+
+// .inner.price__inner {
+//   max-width: rem(630);
+//   @include mq(md) {
+//     min-width: rem(750);
+//   }
+// }
+
+
+// .price__heading {
+//   margin-top: rem(40);
+//   text-align: center;
+//   @include mq(md) {
+//     margin-top: rem(80);
+//   }
+// }
+
+// .price__heading p {
+//   font-family: $base-font-family;
+//   font-size: rem(16);
+//   color: $color-font;
+//   font-weight: $normal;
+//   margin-top: rem(10);
+// }
+
+// .price__contents {
+//   margin-top: rem(20);
+//   @include mq(md) {
+//     margin-top: rem(40);
+//   }
+// }
+
+

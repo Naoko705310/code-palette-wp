@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.inner.works__inner {
+  max-width: rem(630);
+  @include mq(md) {
+    min-width: rem(1080);
+  }
+}
+
+.works__contents-wrapper {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.works__btn {
+  margin-top: rem(80);
+  text-align: center;
+}
+
+
+.works__heading {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.works__heading p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+}
+
+.works__heading--remark {
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: rem(20);
+}
+

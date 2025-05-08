@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.inner.service__inner {
+  max-width: rem(630);
+  @include mq(md) {
+    min-width: rem(1080);
+  }
+}
+
+.service__contents-wrapper {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.service__heading {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.service__heading p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+}
+
+.service__heading--sub {
+  margin-top: rem(10);
+}
+

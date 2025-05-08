@@ -1,0 +1,31 @@
+@use "global" as *;
+// TOPへもどるボタン
+
+.button-to-top {
+  opacity: 0;
+  position: fixed;
+  right: rem(25);
+  bottom: rem(40);
+  cursor: pointer;
+  z-index: 1000;
+  width: rem(50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-to-top img {
+  width: 100%;
+}
+
+.button-to-top span {
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $color-font;
+  font-weight: $bold;
+  line-height: 1.5;
+}
+
+.button-to-top.is-active {
+  opacity: 1;
+}

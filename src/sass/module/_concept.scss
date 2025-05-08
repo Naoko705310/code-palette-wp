@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.concept__inner.inner {
+  max-width: rem(600);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    max-width: rem(1080);
+  }
+
+}
+
+/* Intro テキスト */
+.concept__intro {
+  text-align: center;
+  margin-top: rem(40);
+}
+
+.concept__intro p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.8;
+  margin-top: rem(20);
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+.concept__highlight {
+  display: inline-block;
+  position: relative;
+}
+
+.concept__highlight::after {
+  content: '';
+  position: absolute;
+  bottom: rem(2);
+  left: 0;
+  width: 100%;
+  height: rem(8);
+  background-color: rgba(255, 182, 193, 0.5);
+  z-index: -1;
+}
+
+/* ポイント（アイコン付きリスト） */
+.concept__points {
+  display: grid;
+  gap: rem(40);
+  margin-top: rem(40);
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: rem(80);
+  }
+}
+
+.concept__points li {
+  background-color: $gray-light;
+  padding: rem(40) rem(20);
+  border-radius: rem(8);
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $bold;
+  line-height: 1.5;
+  position: relative;
+  min-height: rem(300);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.concept__icon {
+  margin-top: rem(40);
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept__icon img {
+  width: 80%;
+  height: auto;
+  max-width: rem(200);
+  object-fit: contain;
+  display: inline-block;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.concept__points li:hover .concept__icon {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Summary（締めのメッセージ） */
+.concept__summary {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $bold;
+  line-height: 1.8;
+  text-align: center;
+  margin-top: rem(60);
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}

@@ -1,0 +1,133 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;//視認性向上
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+//list-styleを戻したい時は、list-style: disc;にする。
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+//クラス名で指定がない場合、yやgなど下部に降り下がるディセンダーがある場合は、それを避けて装飾される。（下線など。つまり文字と下線の間にディセンダーの分だけ隙間が生じる。）
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+// フォントスタイルを親要素から引き継ぐ
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+//alt属性が無い画像をぼかすことで、属性指定がないことを明示する
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* ============================================
+/* フォームリセット
+/* ============================================ */
+
+// フォームリセット（不要な線や余白などを消す）
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+  padding: 0;
+}
+
+// テキスト入力（お名前やメールなど）
+.input-text, .input-email, .input-tel, .input-url, .input-file {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+// フォーカスした時に枠に色がつくように
+.input-text:focus,
+.input-email:focus,
+.input-tel:focus,
+.select-box:focus,
+.textarea-box:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 0;
+}
+
+/* ホバー */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+

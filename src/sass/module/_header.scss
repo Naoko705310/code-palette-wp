@@ -1,0 +1,31 @@
+@use "global" as *;
+// ヘッダー
+
+.header {
+  width: 100%;
+  max-width: 100%;
+  height: rem(80);
+  background: $white; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
+.header__inner {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 rem(15);
+  @include mq(md) {
+    padding: 0 rem(20) 0 rem(40);
+  }
+}

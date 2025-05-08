@@ -1,0 +1,138 @@
+// @use "global" as *;
+// //  アコーディオン
+
+// .accordion {
+//   position: relative;
+// }
+
+// // 2つ目以降だけmargin-topをつける
+// .accordion__item:nth-child(n+2) {
+//   margin-top: rem(40);
+// }
+
+// // 見出し（開く時クリックする部分）
+// .accordion__title {
+//   font-family: $base-font-family;
+//   font-size: rem(16);
+//   color: $white;
+//   font-weight: $normal;
+//   background-color: $green;
+//   position: relative;
+//   padding: rem(15);
+//   cursor: pointer;
+//   @include mq(md) {
+//     font-size: rem(20);
+//     padding: rem(26) rem(40);
+//   }
+// }
+
+// // プラスマーク（横？）
+// .accordion__title::before {
+//   content: '';
+//   display: inline-block;
+//   width: rem(32);
+//   height: rem(1);
+//   background-color: $white;
+//   position: absolute;
+//   right: rem(16);
+//   top: 50%;
+//   transform: translateY(-50%);
+//   transition: opacity .3s;
+//   @include mq(md) {
+//     right: rem(40);
+//   }
+// }
+
+// // プラスマーク（縦？）
+// .accordion__title::after {
+//   content: '';
+//   display: inline-block;
+//   width: rem(32);
+//   height: rem(1);
+//   background-color: $white;
+//   position: absolute;
+//   right: rem(16);
+//   top: 50%;
+//   transform: translateY(-50%) rotate(180deg);
+//   transition: transform .3s;
+//   @include mq(md) {
+//     right: rem(40);
+//   }
+// }
+
+// .accordion__title.show::before {
+//   opacity: 1;
+// }
+
+// .accordion__title.show::after {
+//   transform: translateY(-50%) rotate(90deg);
+// }
+
+// // アコーディオン展開部
+// .accordion__contents {
+//   display: none;//最初は隠す場合
+//   // display: block;//最初から開く場合
+//   height: auto;
+//   border: 1px solid $green;
+//   margin-top: 0;
+//   @include mq(md) {
+//     margin-top: rem(16);
+//   }
+// }
+
+// // 価格表の行
+// .accordion__contents dl {
+//   font-family: $base-font-family;
+//   font-size: rem(16);
+//   color: $color-font;
+//   font-weight: $normal;
+//   display: grid;
+//   grid-template-columns: 60% 40%;
+//   border-bottom: 1px solid $gray;
+// }
+
+// .accordion__contents dl:first-child {
+//   font-weight: $bold;
+//   background-color: $pink;
+//   text-align: center;
+// }
+
+// .accordion__contents dl:last-child {
+//   border-bottom: none;
+// }
+
+// // 作業内容
+// .accordion__contents dt {
+//   border-right: 1px solid $gray;
+//   padding: rem(8);
+// }
+
+// // 金額
+// .accordion__contents dd {
+//   padding: rem(8);
+//   text-align: right;
+// }
+
+// .accordion__contents dd.accordion__price {
+// text-align: center;
+// }
+
+// // 備考
+// .accordion__remark {
+//   padding: rem(10);
+// }
+
+// .accordion__remark p {
+//   font-family: $base-font-family;
+//   font-size: rem(16);
+//   color: $color-font;
+//   font-weight: $normal;
+//   margin-top: rem(10);
+// }
+
+// .accordion__remark p:nth-child(1) {
+//   margin-top: 0;
+// }
+
+
+

@@ -1,0 +1,22 @@
+@use "global" as *;
+// ヘッダーロゴ
+
+.header-logo {
+  width: rem(200);
+  max-width: 100%;
+  @include mq(md) {
+    width: rem(300);
+  }
+}
+.header-logo a {
+  width: 100%;
+  max-width: 100%;
+  height: inherit;
+}
+
+.header-logo img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: baseline;
+}

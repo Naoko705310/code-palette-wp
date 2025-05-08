@@ -1,0 +1,25 @@
+# VSCodeの設定ファイル（エディタ固有なので不要）
+.vscode/
+
+# Macの不要ファイル
+.DS_Store
+
+# ビルドフォルダ（gulpなどで出力されたもの）
+dist/
+
+# Gulp関連
+_gulp/node_modules/
+_gulp/package-lock.json/
+_gulp/.DS_Store
+
+# npm関連（今後package.jsonが出る可能性があるので念のため）
+node_modules/
+package-lock.json
+
+# OSや一時ファイル（念のため追加）
+Thumbs.db
+ehthumbs.db
+*.log
+*.swp
+*.swo
+*.bak

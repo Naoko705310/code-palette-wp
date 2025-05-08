@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.works-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto; /* 自動で高さを調整 */
+  gap: rem(80);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

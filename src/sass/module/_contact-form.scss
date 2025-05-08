@@ -1,0 +1,280 @@
+@use "global" as *;
+// お問い合わせフォーム
+.contact-form {
+  margin-top: rem(80);
+}
+
+.contact-form__item {
+  margin-top: rem(40);
+}
+
+//入力エリアの枠線
+.input-text, .input-tel, .input-email, .input-file, .select-box, .textarea-box {
+  background-color: $white;
+  border: 1px solid $green;
+}
+
+/* ============================================
+/* テキスト入力（名前、メルアド等）
+/* ============================================ */
+// 必須タグ＋ラベルのテキスト
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  margin-top: rem(20);
+}
+// 必須タグ
+.required-tag {
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $white;
+  font-weight: $normal;
+  background-color: #ff0000;
+  padding: rem(4) rem(6);
+}
+
+// ラベルのテキスト
+.input-label {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+}
+
+// テキスト入力エリア
+.input-text,
+.input-email,
+.input-tel {
+  width: 100%;
+  padding: rem(10);
+  margin-top: rem(10);
+}
+
+.input-text::placeholder,
+.input-email::placeholder,
+.input-tel::placeholder,
+.textarea-box::placeholder {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $normal;
+}
+
+/* ============================================
+/* チェックボックス
+/* ============================================ */
+
+.checkbox-group {
+  margin-top: rem(10); 
+}
+
+.check-test { //inputタグ
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+// inputとラベルのテキスト
+.check-label {
+  position: relative;
+  display: inline-block;
+  padding-left: rem(30); //box用のスペースを確保
+  margin-bottom: rem(5);
+  cursor: pointer;
+}
+
+// チェックボックスラベル（フォント）
+.check-label-span {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+    @include mq(md) {
+    font-size: rem(18);
+    }
+}
+//チェックボックスのカスタムデザイン
+.check-label-span::before {
+  content: "";
+  display: inline-block;
+  width: rem(20);
+  height: rem(20);
+  background-color: $white;
+  border: 1px solid $green;
+  border-radius: rem(4);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//チェックされた時の枠の色
+.check-test:checked + .check-label-span::before {
+  border-color: #3498db;
+}
+
+// チェックマークのカスタムデザイン
+.check-test:checked + .check-label-span::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid $green;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  top: 50%;
+  left: rem(8); //位置は調整する
+  transform: translateY(-50%) rotate(45deg);
+}
+
+// チェックボックスがフォーカスされた時の枠の色
+.check-test:focus + .check-label-span::before {
+  outline: 2px solid #3498db; 
+}
+
+.contact-form__privacy-text {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+    @include mq(md) {
+    font-size: rem(16);
+    }
+}
+.contact-form__privacy-text a {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $green;
+  font-weight: $bold;
+  line-height: 1.5;
+  border-bottom: 1px solid $green;
+    @include mq(md) {
+    font-size: rem(16);
+    }
+}
+
+/* ============================================
+/* セレクトボックス（お住まいの地域）
+/* ============================================ */
+
+// セレクトボックスのコンテナ
+.select-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; //幅は必ず指定
+  margin-top: rem(10);
+  @include mq(md) {
+    width: rem(200);
+  }
+}
+
+// セレクトボックス
+.select-box {
+  padding: rem(10);
+  border: 1px solid $green;
+  border-radius: rem(4);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%; //コンテナの幅100%にする
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+    @include mq(md) {
+    font-size: rem(18);
+    }
+}
+
+// プルダウンの矢印
+.select-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(10);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $green;
+  transform: translateY(-50%);
+}
+
+// セレクトボックスがフォーカスされた時の枠の色
+.select-box:focus {
+  border-color: #3498db; 
+}
+
+/* ============================================
+/* テキストエリア（お問い合わせ内容）
+/* ============================================ */
+// テキストエリアのコンテナ
+.textarea-box {
+  width: 100%; // 幅を指定
+  padding: rem(10); 
+  border: 1px solid $green; 
+  border-radius: 4px; 
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  resize: vertical; //表示崩れ回避
+  outline: none;
+  box-sizing: border-box; 
+  margin-top: rem(10);
+}
+
+/* ============================================
+/* 送信ボタン
+/* ============================================ */
+
+.contact-form__button {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+/* ============================================
+/* エラー時のスタイル
+/* ============================================ */
+
+// 各項目下に出すエラーメッセージのスタイル（赤字）
+.js-error-required,
+.js-error-required-checkbox,
+.js-error-required-radio,
+.js-error-required-select,
+.js-error-required-agreement {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  // color: $error-message-color;
+  color: #ff0000;
+  font-weight: $normal;
+  margin-top: rem(8);
+}
+
+// エラーメッセージ上の余白
+// dd span {
+//   display: block;
+//   margin-top: rem(8);
+// }
+
+.errored {
+  border: 1px solid #C94800;
+  background: rgba(201, 72, 0, 0.20);
+  // color: #fff;
+}
+
+// 必須項目に入力がなく、送信できない時のボタンの色
+.input-submit.disabled, .input-submit:disabled {
+  background-color: #cccccc; 
+  color: #666666; 
+  cursor: not-allowed; 
+}
+
+.input-submit.disabled:hover, .input-submit:disabled:hover {
+  background-color: #cccccc; // disabled時のhoverの背景色
+}

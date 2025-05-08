@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.service-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-cards__item {
+width: 100%;
+max-width: 100%;
+height: inherit;
+}

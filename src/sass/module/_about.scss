@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.about__card {
+  background-color: $white;
+  box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.08);
+  padding: rem(40) rem(24);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(24);
+  align-items: center;
+  margin-top: rem(80);
+
+  @include mq(md) {
+    grid-template-columns: rem(320) 1fr;
+    gap: rem(40);
+    padding: rem(60);
+  }
+}
+
+.about__card-image {
+  width: 100%;
+  max-width: rem(320);
+  margin: 0 auto;
+}
+
+.about__card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
+}
+
+
+.about__card-info {
+  font-family: $base-font-family;
+  color: $color-font;
+
+  p + p {
+    margin-top: rem(16);
+  }
+}
+
+.about__name {
+  font-size: rem(24);
+  font-weight: $bold;
+  color: $color-font;
+  margin-bottom: rem(8);
+}
+
+.about__name span {
+  font-size: rem(16);
+}
+
+.about__position {
+  font-size: rem(18);
+  font-weight: $bold;
+  color: $color-font;
+  border-bottom: 1px solid $green;
+  padding-bottom: rem(8);
+  margin-bottom: rem(16);
+}

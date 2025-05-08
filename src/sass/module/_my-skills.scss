@@ -1,0 +1,46 @@
+@use "global" as *;
+
+// スキルのリスト
+.my-skills__items {
+  margin-top: rem(40);
+  @include mq(md) {
+  margin-top: rem(80); 
+  }
+}
+
+.my-skills__item {
+  margin-top: rem(40);
+}
+
+.my-skills__item h4 {
+  background-color: $pink;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $white;
+  font-weight: $bold;
+  display: inline-block;
+  padding: rem(10);
+}
+
+.my-skills__item p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  margin-top: rem(20);
+}
+
+
+.my-skills__others {
+  padding-left: rem(20);
+  margin-top: rem(20);
+}
+
+.my-skills__others li {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  margin-top: rem(10);
+  list-style-type: disc; 
+}

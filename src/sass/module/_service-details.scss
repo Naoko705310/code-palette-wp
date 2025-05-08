@@ -1,0 +1,137 @@
+@use "global" as *;
+
+.service-details {
+  margin-top: rem(96); 
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}
+
+.inner.service-details__inner {
+  max-width: rem(630);
+  @include mq(md) {
+    max-width: rem(1080);
+  }
+}
+
+.service-details__heading {
+  position: relative;
+  border-bottom: 1px solid $gray;
+  margin-top: rem(100);
+}
+
+.service-details__title {
+  font-family: $base-font-family;
+  font-size: rem(24);
+  color: $color-font;
+  font-weight: $bold;
+  padding-bottom: rem(8);
+  @include mq(md) {
+  font-size: rem(32);
+  }
+}
+
+// service-detailsの背景テキスト
+.service-details__title span { 
+  display: inline-block;
+  font-size: rem(40); 
+  color: $color-font; 
+  opacity: 0.1; 
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 1;
+  text-transform: capitalize;
+  padding-bottom: rem(8);
+  z-index: -1; 
+}
+
+.service-details__text {
+  margin-top: rem(20);
+}
+
+.service-details__text p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  margin-top: rem(10);
+}
+
+.service-details__list {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  margin-top: rem(80);
+}
+
+.service-details__list dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: rem(20);
+  @include mq(md) {
+    grid-template-columns: 20% 1fr;
+    gap: rem(40);
+  }
+}
+.service-details__list dt {
+  font-weight: $bold;
+  border-bottom: 3px dotted $green;
+  padding: rem(8) 0;
+}
+
+.service-details__list dd {
+  padding: rem(8) 0;
+}
+
+.service-details__icon-wrapper {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80); 
+  }
+}
+
+.service-details__items {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(20);
+  justify-content: center;
+  margin: 0 auto;
+  @include mq(md) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: rem(40);
+  }
+}
+
+// サービスアイコンに影をつける
+.service-details__item {
+  background-color: $white;
+  padding: rem(20);
+  border-radius: rem(20);
+  box-shadow: 
+  13px 13px 26px #cac5c5,
+  -13px -13px 26px #ffffff;
+}
+
+.service-details__image {
+  position: relative;
+}
+
+.service-details__image::before {
+  content: "";
+  display: block;
+  padding-top: 100%;// height/width
+}
+
+.service-details__image img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
