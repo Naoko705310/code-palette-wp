@@ -173,6 +173,38 @@
               </figure>
               <h3><?php the_title(); ?></h3>
               <div class="works-modal__text"><?php the_content(); ?></div>
+              <!-- クライアントのURLを表示 -->
+              <?php
+                $url = get_post_meta(get_the_ID(), 'url', true);
+                if ($url):
+                ?>
+                  <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer" class="works-modal__client-url">
+                    URL: <?php echo esc_html($url); ?>
+                  </a>
+              <?php endif; ?>
+            </div>
+            <!-- カードの詳細 -->
+            <div class="works-modal__details">
+              <dl class="works-modal__details-wrapper">
+                <dt class="works-modal__index">クライアント</dt>
+                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'client', true)); ?></dd>
+              </dl>
+              <dl class="works-modal__details-wrapper">
+                <dt class="works-modal__index">制作時間</dt>
+                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'time', true)); ?></dd>
+              </dl>
+              <dl class="works-modal__details-wrapper">
+                <dt class="works-modal__index">使用言語</dt>
+                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'language', true)); ?></dd>
+              </dl>
+              <dl class="works-modal__details-wrapper">
+                <dt class="works-modal__index">担当範囲</dt>
+                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'scope', true)); ?></dd>
+              </dl>
+              <dl class="works-modal__details-wrapper">
+                <dt class="works-modal__index">制作背景</dt>
+                <dd class="works-modal__text"><?php echo wp_kses_post(get_post_meta(get_the_ID(), 'background', true)); ?></dd>
+              </dl>
             </div>
 
             <!-- 実績一覧へ戻る -->

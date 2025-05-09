@@ -116,3 +116,10 @@ function custom_post_type() {
 }
 add_action('init', 'custom_post_type');
 
+/* --------------------------------------------
+/* 管理画面にカスタムフィールドの選択肢を表示する
+/* -------------------------------------------- */
+function enable_custom_fields_for_works() {
+  add_post_type_support('works', 'custom-fields');
+}
+add_action('init', 'enable_custom_fields_for_works');
