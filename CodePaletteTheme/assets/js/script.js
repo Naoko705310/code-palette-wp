@@ -69,34 +69,14 @@ jQuery(function ($) {
   /* --------------------------------------------
   /* 制作実績のモーダル
   /* -------------------------------------------- */
-  // モーダルを開く
-  document.querySelectorAll('.js-works-modal-open').forEach(function (card) {
-    card.addEventListener('click', function (e) {
+  document.querySelectorAll('a.js-works-modal-open').forEach(function (link) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
       var modalId = this.dataset.modalId;
       var modal = document.querySelector('.js-works-modal[data-modal-id="' + modalId + '"]');
       if (modal) {
         modal.classList.add('is-active');
         document.body.classList.add('works-modal__open');
-      }
-    });
-  });
-
-  // モーダルを閉じる（閉じるボタン）
-  document.querySelectorAll('.js-works-modal__close-button').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var modal = this.closest('.js-works-modal');
-      modal.classList.remove('is-active');
-      document.body.classList.remove('works-modal__open');
-    });
-  });
-
-  // モーダルを閉じる（背景クリック）
-  document.querySelectorAll('.js-works-modal').forEach(function (modal) {
-    modal.addEventListener('click', function (e) {
-      if (e.target === modal) {
-        modal.classList.remove('is-active');
-        document.body.classList.remove('works-modal__open');
       }
     });
   });

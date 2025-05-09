@@ -102,41 +102,42 @@
       </div>
       <p class="works__heading--remark">※現在制作中の案件と、許可をいただいていない案件については掲載しておりません。</p>
 
-      <!-- 制作実績一覧 -->
-      <div class="works__contents-wrapper">
+<!-- 制作実績一覧 -->
+<div class="works__contents-wrapper">
 
-        <?php
-        $args = array(
-            'post_type' => 'works',
-            'posts_per_page' => -1
-        );
-        $works_query = new WP_Query($args);
-        if ($works_query->have_posts()):
-        ?>
-        <ul class="works__items works-cards">
-          <?php while ($works_query->have_posts()): $works_query->the_post(); ?>
-          <?php $modal_id = 'modal-' . get_the_ID(); ?>
-          <li class="works__item">
-            <div class="js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
-              <figure class="works-card__image-wrapper">
-                <?php 
-                if (has_post_thumbnail()) {
-                    the_post_thumbnail('large');
-                } else {
-                    echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
-                }
-                ?>
-              </figure>
-              <div class="works-card__body">
-                <h3 class="works-card__heading"><?php the_title(); ?></h3>
-                <p class="works-card__sub-heading"><?php echo get_the_excerpt(); ?></p>
-              </div>
-            </div>
-          </li>
-          <?php endwhile; ?>
-        </ul>
-        <?php endif; wp_reset_postdata(); ?>
-      </div>
+  <?php
+  $args = array(
+      'post_type' => 'works',
+      'posts_per_page' => -1
+  );
+  $works_query = new WP_Query($args);
+  if ($works_query->have_posts()):
+  ?>
+  <ul class="works__items works-cards">
+    <?php while ($works_query->have_posts()): $works_query->the_post(); ?>
+    <?php $modal_id = 'modal-' . get_the_ID(); ?>
+    <li class="works__item">
+      <a href="#" class="js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
+        <figure class="works-card__image-wrapper">
+          <?php 
+          if (has_post_thumbnail()) {
+              the_post_thumbnail('large');
+          } else {
+              echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
+          }
+          ?>
+        </figure>
+        <div class="works-card__body">
+          <h3 class="works-card__heading"><?php the_title(); ?></h3>
+          <p class="works-card__sub-heading"><?php echo get_the_excerpt(); ?></p>
+        </div>
+      </a>
+    </li>
+    <?php endwhile; ?>
+  </ul>
+  <?php endif; wp_reset_postdata(); ?>
+</div>
+
 
       <!-- モーダル本体 -->
       <?php
