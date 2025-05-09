@@ -117,7 +117,7 @@
     <?php while ($works_query->have_posts()): $works_query->the_post(); ?>
     <?php $modal_id = 'modal-' . get_the_ID(); ?>
     <li class="works__item">
-      <a href="#" class="js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
+      <a href="#" class="works-card js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
         <figure class="works-card__image-wrapper">
           <?php 
           if (has_post_thumbnail()) {
