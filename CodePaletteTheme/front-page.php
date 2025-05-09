@@ -177,8 +177,7 @@
               <?php endif; ?>
               <div class="works-modal__text"><?php the_content(); ?></div>
             </div>
-
-            <!-- カードの詳細 -->
+            <!-- 制作実績の詳細 -->
             <div class="works-modal__details">
               <dl class="works-modal__details-wrapper">
                 <dt class="works-modal__index">クライアント</dt>
@@ -201,6 +200,7 @@
                 <dd class="works-modal__text"><?php the_field('background'); ?></dd>
               </dl>
             </div>
+
 
             <!-- 実績一覧へ戻る -->
             <div class="works-modal__button-to-list">
