@@ -102,42 +102,40 @@
       </div>
       <p class="works__heading--remark">※現在制作中の案件と、許可をいただいていない案件については掲載しておりません。</p>
 
-<!-- 制作実績一覧 -->
-<div class="works__contents-wrapper">
-
-  <?php
-  $args = array(
-      'post_type' => 'works',
-      'posts_per_page' => -1
-  );
-  $works_query = new WP_Query($args);
-  if ($works_query->have_posts()):
-  ?>
-  <ul class="works__items works-cards">
-    <?php while ($works_query->have_posts()): $works_query->the_post(); ?>
-    <?php $modal_id = 'modal-' . get_the_ID(); ?>
-    <li class="works__item">
-      <a href="#" class="works-card js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
-        <figure class="works-card__image-wrapper">
-          <?php 
-          if (has_post_thumbnail()) {
-              the_post_thumbnail('large');
-          } else {
-              echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
-          }
-          ?>
-        </figure>
-        <div class="works-card__body">
-          <h3 class="works-card__heading"><?php the_title(); ?></h3>
-          <p class="works-card__sub-heading"><?php echo get_the_excerpt(); ?></p>
-        </div>
-      </a>
-    </li>
-    <?php endwhile; ?>
-  </ul>
-  <?php endif; wp_reset_postdata(); ?>
-</div>
-
+      <!-- 制作実績一覧 -->
+      <div class="works__contents-wrapper">
+        <?php
+        $args = array(
+            'post_type' => 'works',
+            'posts_per_page' => -1
+        );
+        $works_query = new WP_Query($args);
+        if ($works_query->have_posts()):
+        ?>
+        <ul class="works__items works-cards">
+          <?php while ($works_query->have_posts()): $works_query->the_post(); ?>
+          <?php $modal_id = 'modal-' . get_the_ID(); ?>
+          <li class="works__item">
+            <a href="#" class="works-card js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
+              <figure class="works-card__image-wrapper">
+                <?php 
+                if (has_post_thumbnail()) {
+                    the_post_thumbnail('large');
+                } else {
+                    echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
+                }
+                ?>
+              </figure>
+              <div class="works-card__body">
+                <h3 class="works-card__heading"><?php the_title(); ?></h3>
+                <p class="works-card__sub-heading"><?php echo get_the_excerpt(); ?></p>
+              </div>
+            </a>
+          </li>
+          <?php endwhile; ?>
+        </ul>
+        <?php endif; wp_reset_postdata(); ?>
+      </div>
 
       <!-- モーダル本体 -->
       <?php
@@ -172,38 +170,35 @@
                 ?>
               </figure>
               <h3><?php the_title(); ?></h3>
-              <div class="works-modal__text"><?php the_content(); ?></div>
-              <!-- クライアントのURLを表示 -->
-              <?php
-                $url = get_post_meta(get_the_ID(), 'url', true);
-                if ($url):
-                ?>
-                  <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer" class="works-modal__client-url">
-                    URL: <?php echo esc_html($url); ?>
-                  </a>
+              <?php if (get_field('url')): ?>
+                <a href="<?php the_field('url'); ?>" target="_blank" rel="noopener noreferrer" class="works-modal__client-url">
+                  URL: <?php the_field('url'); ?>
+                </a>
               <?php endif; ?>
+              <div class="works-modal__text"><?php the_content(); ?></div>
             </div>
+
             <!-- カードの詳細 -->
             <div class="works-modal__details">
               <dl class="works-modal__details-wrapper">
                 <dt class="works-modal__index">クライアント</dt>
-                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'client', true)); ?></dd>
+                <dd class="works-modal__text"><?php the_field('client'); ?></dd>
               </dl>
               <dl class="works-modal__details-wrapper">
                 <dt class="works-modal__index">制作時間</dt>
-                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'time', true)); ?></dd>
+                <dd class="works-modal__text"><?php the_field('time'); ?></dd>
               </dl>
               <dl class="works-modal__details-wrapper">
                 <dt class="works-modal__index">使用言語</dt>
-                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'language', true)); ?></dd>
+                <dd class="works-modal__text"><?php the_field('language'); ?></dd>
               </dl>
               <dl class="works-modal__details-wrapper">
                 <dt class="works-modal__index">担当範囲</dt>
-                <dd class="works-modal__text"><?php echo esc_html(get_post_meta(get_the_ID(), 'scope', true)); ?></dd>
+                <dd class="works-modal__text"><?php the_field('scope'); ?></dd>
               </dl>
               <dl class="works-modal__details-wrapper">
                 <dt class="works-modal__index">制作背景</dt>
-                <dd class="works-modal__text"><?php echo wp_kses_post(get_post_meta(get_the_ID(), 'background', true)); ?></dd>
+                <dd class="works-modal__text"><?php the_field('background'); ?></dd>
               </dl>
             </div>
 
