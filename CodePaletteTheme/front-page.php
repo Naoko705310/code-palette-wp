@@ -106,8 +106,8 @@
       <div class="works__contents-wrapper">
         <?php
         $args = array(
-            'post_type' => 'works',
-            'posts_per_page' => -1
+          'post_type' => 'works',
+          'posts_per_page' => -1
         );
         $works_query = new WP_Query($args);
         if ($works_query->have_posts()):
@@ -120,9 +120,9 @@
               <figure class="works-card__image-wrapper">
                 <?php 
                 if (has_post_thumbnail()) {
-                    the_post_thumbnail('large');
+                  the_post_thumbnail('large');
                 } else {
-                    echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
+                  echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
                 }
                 ?>
               </figure>
@@ -140,8 +140,8 @@
       <!-- モーダル本体 -->
       <?php
       $args = array(
-          'post_type' => 'works',
-          'posts_per_page' => -1
+        'post_type' => 'works',
+        'posts_per_page' => -1
       );
       $works_query_modal = new WP_Query($args);
       if ($works_query_modal->have_posts()):
@@ -163,9 +163,9 @@
               <figure class="works-modal__image-wrapper">
                 <?php 
                 if (has_post_thumbnail()) {
-                    the_post_thumbnail('large');
+                  the_post_thumbnail('large');
                 } else {
-                    echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
+                  echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
                 }
                 ?>
               </figure>
@@ -177,7 +177,8 @@
               <?php endif; ?>
               <div class="works-modal__text"><?php the_content(); ?></div>
             </div>
-            <!-- 制作実績の詳細 -->
+
+            <!-- 詳細項目 -->
             <div class="works-modal__details">
               <dl class="works-modal__details-wrapper">
                 <dt class="works-modal__index">クライアント</dt>
@@ -201,7 +202,6 @@
               </dl>
             </div>
 
-
             <!-- 実績一覧へ戻る -->
             <div class="works-modal__button-to-list">
               <a href="#works" class="button button--to-works-list"><span>実績一覧</span></a>
@@ -210,9 +210,10 @@
         </div>
       </div>
       <?php endwhile; wp_reset_postdata(); endif; ?>
-
     </div>
   </section>
+
+
 
 
 
