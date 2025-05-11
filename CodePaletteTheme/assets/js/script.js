@@ -67,16 +67,33 @@ jQuery(function ($) {
   });
 
   /* --------------------------------------------
-  /* 制作実績のモーダル
+  /* 制作実績のモーダル（jQuery）
   /* -------------------------------------------- */
-  document.querySelectorAll('a.js-works-modal-open').forEach(function (link) {
-    link.addEventListener('click', function (e) {
+  jQuery(function ($) {
+    // モーダルを開く
+    $('a.js-works-modal-open').on('click', function (e) {
       e.preventDefault();
-      var modalId = this.dataset.modalId;
-      var modal = document.querySelector('.js-works-modal[data-modal-id="' + modalId + '"]');
-      if (modal) {
-        modal.classList.add('is-active');
-        document.body.classList.add('works-modal__open');
+      var modalId = $(this).data('modal-id');
+      var $modal = $('.js-works-modal[data-modal-id="' + modalId + '"]');
+      if ($modal.length) {
+        $modal.addClass('is-active');
+        $('body').addClass('works-modal__open');
+      }
+    });
+
+    // 閉じるボタンでモーダルを閉じる
+    $('.js-works-modal__close-button').on('click', function () {
+      var $modal = $(this).closest('.js-works-modal');
+      $modal.removeClass('is-active');
+      $('body').removeClass('works-modal__open');
+    });
+
+    // モーダルの外側クリックで閉じる（内側クリックは除外）
+    $('.js-works-modal').on('click', function (e) {
+      var $inner = $(this).find('.works-modal__inner');
+      if (!$inner.is(e.target) && $inner.has(e.target).length === 0) {
+        $(this).removeClass('is-active');
+        $('body').removeClass('works-modal__open');
       }
     });
   });
