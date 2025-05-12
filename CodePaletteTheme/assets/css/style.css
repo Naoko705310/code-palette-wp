@@ -1592,26 +1592,30 @@ body.works-modal__open {
 	background: none;
 	border: none;
 	cursor: pointer;
+	height: 1.5rem;
 	position: absolute;
 	right: 1.5625rem;
 	top: 1.5625rem;
+	width: 1.5rem;
 	z-index: 1002;
 }
 
 .works-modal__close-button span {
 	background: #000;
-	display: block;
 	height: 0.125rem;
-	margin: 0.25rem 0;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform-origin: center;
 	width: 1.25rem;
 }
 
-.works-modal__close01 {
-	transform: rotate(45deg);
+.works-modal__close-button .works-modal__close01 {
+	transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.works-modal__close02 {
-	transform: rotate(-45deg);
+.works-modal__close-button .works-modal__close02 {
+	transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .works-modal__heading {

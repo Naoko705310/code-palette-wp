@@ -69,6 +69,7 @@ jQuery(function ($) {
   /* --------------------------------------------
   /* 制作実績のモーダル（jQuery）
   /* -------------------------------------------- */
+
   jQuery(function ($) {
     // モーダルを開く
     $('a.js-works-modal-open').on('click', function (e) {
@@ -82,18 +83,35 @@ jQuery(function ($) {
     });
 
     // 閉じるボタンでモーダルを閉じる
-    $('.js-works-modal__close-button').on('click', function () {
-      var $modal = $(this).closest('.js-works-modal');
-      $modal.removeClass('is-active');
+    $('.js-works-modal__close-button').on('click', function (e) {
+      e.stopPropagation(); // モーダル外のクリック処理を止める
+      $(this).closest('.js-works-modal').removeClass('is-active');
       $('body').removeClass('works-modal__open');
     });
 
-    // モーダルの外側クリックで閉じる（内側クリックは除外）
+    // モーダル外側（＝背景）をクリックしたときだけ閉じる
     $('.js-works-modal').on('click', function (e) {
-      var $inner = $(this).find('.works-modal__inner');
-      if (!$inner.is(e.target) && $inner.has(e.target).length === 0) {
+      if ($(e.target).closest('.works-modal__container').length === 0) {
         $(this).removeClass('is-active');
         $('body').removeClass('works-modal__open');
+      }
+    });
+  });
+
+  // モーダル内の「実績一覧へ戻る」ボタン
+  $('.button--to-works-list').on('click', function (e) {
+    e.preventDefault();
+    var $modal = $(this).closest('.js-works-modal');
+    var target = $($(this).attr('href'));
+
+    // フェードアウトしてからスクロール
+    $modal.fadeOut(300, function () {
+      $modal.removeClass('is-active');
+      $('body').removeClass('works-modal__open');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 500);
       }
     });
   });

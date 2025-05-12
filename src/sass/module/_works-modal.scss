@@ -57,26 +57,30 @@ body.works-modal__open {
   position: absolute;
   top: rem(25);
   right: rem(25);
+  width: rem(24);
+  height: rem(24);
   background: none;
   border: none;
   cursor: pointer;
   z-index: 1002;
 
   span {
-    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: rem(20);
     height: rem(2);
     background: #000;
-    margin: rem(4) 0;
+    transform-origin: center;
   }
-}
 
-.works-modal__close01 {
-  transform: rotate(45deg);
-}
+  .works-modal__close01 {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
 
-.works-modal__close02 {
-  transform: rotate(-45deg);
+  .works-modal__close02 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 }
 
 // モーダル見出し
