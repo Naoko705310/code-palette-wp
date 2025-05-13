@@ -172,70 +172,70 @@ jQuery(function ($) {
   /* --------------------------------------------
   /* お問い合わせフォーム（バリデーション）
   /* -------------------------------------------- */
+  // ContactForm7で実装するので、一旦コメントアウト
+  // function validateForm() {
+  //   let hasError = false;
 
-  function validateForm() {
-    var hasError = false;
+  //   // エラーメッセージを初期化
+  //   $('.js-error-required').text('');
+  //   $('.js-error-required-checkbox').text('');
+  //   $('.js-error-required-radio').text('');
+  //   $('.js-error-required-agreement').text('');
+  //   $('.input-text, .input-email, .input-tel, .select-box, textarea').removeClass('errored');
 
-    // エラーメッセージを初期化
-    $('.js-error-required').text('');
-    $('.js-error-required-checkbox').text('');
-    $('.js-error-required-radio').text('');
-    $('.js-error-required-agreement').text('');
-    $('.input-text, .input-email, .input-tel, .select-box, textarea').removeClass('errored');
+  //   // 必須テキストフィールドのバリデーション
+  //   $('input[required], textarea[required], select[required]').each(function() {
+  //     if (!$(this).val()) {
+  //       $(this).addClass('errored');
+  //       $(this).next('.js-error-required').text('※入力必須項目です');
+  //       hasError = true;
+  //     }
+  //   });
 
-    // 必須テキストフィールドのバリデーション
-    $('input[required], textarea[required], select[required]').each(function () {
-      if (!$(this).val()) {
-        $(this).addClass('errored');
-        $(this).next('.js-error-required').text('※入力必須項目です');
-        hasError = true;
-      }
-    });
+  //   // チェックボックスのバリデーション
+  //   if ($('input[type="checkbox"][required]:checked').length === 0) {
+  //     $('.js-error-required-checkbox').text('※少なくとも一つ選択してください');
+  //     hasError = true;
+  //   }
 
-    // チェックボックスのバリデーション
-    if ($('input[type="checkbox"][required]:checked').length === 0) {
-      $('.js-error-required-checkbox').text('※少なくとも一つ選択してください');
-      hasError = true;
-    }
+  //   // ラジオボタンのバリデーション
+  //   $('input[type="radio"][required]').each(function() {
+  //     var name = $(this).attr('name');
+  //     if ($('input[name="' + name + '"]:checked').length === 0) {
+  //       $('.js-error-required-radio').text('※選択してください');
+  //       hasError = true;
+  //     }
+  //   });
 
-    // ラジオボタンのバリデーション
-    $('input[type="radio"][required]').each(function () {
-      var name = $(this).attr('name');
-      if ($('input[name="' + name + '"]:checked').length === 0) {
-        $('.js-error-required-radio').text('※選択してください');
-        hasError = true;
-      }
-    });
+  //   // 個人情報取扱いのチェックボックスバリデーション
+  //   // 他のチェックボックスとはnameを変える。
+  //   if (!$('input[name="privacy-policy-agreement"]:checked').length) {
+  //     $('.js-error-required-agreement').text('※個人情報保護方針に同意してください。');
+  //     hasError = true;
+  //   }
 
-    // 個人情報取扱いのチェックボックスバリデーション
-    // 他のチェックボックスとはnameを変える。
-    if (!$('input[name="privacy-policy-agreement"]:checked').length) {
-      $('.js-error-required-agreement').text('※個人情報保護方針に同意してください。');
-      hasError = true;
-    }
+  //   // エラーがある場合は送信ボタンを非アクティブに
+  //   if (hasError) {
+  //     $('#js-submit').addClass('disabled').prop('disabled', true);
+  //     return false; // バリデーション失敗
+  //   } else {
+  //     $('#js-submit').removeClass('disabled').prop('disabled', false);
+  //     return true; // バリデーション成功
+  //   }
+  //   }
 
-    // エラーがある場合は送信ボタンを非アクティブに
-    if (hasError) {
-      $('#js-submit').addClass('disabled').prop('disabled', true);
-      return false; // バリデーション失敗
-    } else {
-      $('#js-submit').removeClass('disabled').prop('disabled', false);
-      return true; // バリデーション成功
-    }
-  }
+  //   // 送信ボタンクリック時の処理
+  //   $('#js-submit').click(function(e) {
+  //     e.preventDefault(); // フォームの送信を一時停止
+  //     if (validateForm()) {
+  //       // バリデーションが成功した場合、フォームを送信
+  //       $('#contact-form').submit(); // ここでフォームのIDを正確に指定する
+  //     }
+  // });
 
-  // 送信ボタンクリック時の処理
-  $('#js-submit').click(function (e) {
-    e.preventDefault(); // フォームの送信を一時停止
-    if (validateForm()) {
-      // バリデーションが成功した場合、フォームを送信
-      $('#contact-form').submit(); // ここでフォームのIDを正確に指定する
-    }
-  });
-
-  // 入力フィールドの変更を監視し、エラー状態をリセット
-  // 何も入力せずに送信ボタンを押した時だけでなく、各項目に入力があるか無いかを監視し、状態が変わったら都度関ししてエラーを出すため。
-  $('input, textarea, select').on('change input', function () {
-    validateForm(); // フォームのバリデーションを再実行
-  });
+  // // 入力フィールドの変更を監視し、エラー状態をリセット
+  // // 何も入力せずに送信ボタンを押した時だけでなく、各項目に入力があるか無いかを監視し、状態が変わったら都度関ししてエラーを出すため。
+  // $('input, textarea, select').on('change input', function() {
+  //   validateForm(); // フォームのバリデーションを再実行
+  // });
 }); //この閉じタグは消さない！！！！！
