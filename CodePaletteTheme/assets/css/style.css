@@ -474,6 +474,12 @@ a {
 	border: 1px solid #08AAC6;
 }
 
+.contact-form__label-wrapper p {
+	align-items: center;
+	display: flex;
+	gap: 0.25rem;
+}
+
 /* ============================================
 /* テキスト入力（名前、メルアド等）
 /* ============================================ */
