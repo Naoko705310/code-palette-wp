@@ -112,29 +112,30 @@
         $works_query = new WP_Query($args);
         if ($works_query->have_posts()):
         ?>
-        <ul class="works__items works-cards">
-          <?php while ($works_query->have_posts()): $works_query->the_post(); ?>
-          <?php $modal_id = 'modal-' . get_the_ID(); ?>
-          <li class="works__item">
-            <a href="#" class="works-card js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
-              <figure class="works-card__image-wrapper">
-                <?php 
-                if (has_post_thumbnail()) {
-                  the_post_thumbnail('large');
-                } else {
-                  echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
-                }
-                ?>
-              </figure>
-              <div class="works-card__body">
-                <h3 class="works-card__heading"><?php the_title(); ?></h3>
-                <p class="works-card__sub-heading"><?php echo get_the_excerpt(); ?></p>
-              </div>
-            </a>
-          </li>
-          <?php endwhile; ?>
-        </ul>
-        <?php endif; wp_reset_postdata(); ?>
+          <ul class="works__items works-cards">
+            <?php while ($works_query->have_posts()): $works_query->the_post(); ?>
+              <?php $modal_id = 'modal-' . get_the_ID(); ?>
+              <li class="works__item">
+                <a href="#" class="works-card js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
+                  <figure class="works-card__image-wrapper">
+                    <?php
+                    if (has_post_thumbnail()) {
+                      the_post_thumbnail('large');
+                    } else {
+                      echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
+                    }
+                    ?>
+                  </figure>
+                  <div class="works-card__body">
+                    <h3 class="works-card__heading"><?php the_title(); ?></h3>
+                    <p class="works-card__sub-heading"><?php echo get_the_excerpt(); ?></p>
+                  </div>
+                </a>
+              </li>
+            <?php endwhile; ?>
+          </ul>
+        <?php endif;
+        wp_reset_postdata(); ?>
       </div>
 
       <!-- モーダル本体 -->
@@ -146,70 +147,72 @@
       $works_query_modal = new WP_Query($args);
       if ($works_query_modal->have_posts()):
         while ($works_query_modal->have_posts()): $works_query_modal->the_post();
-        $modal_id = 'modal-' . get_the_ID();
+          $modal_id = 'modal-' . get_the_ID();
       ?>
-      <div class="works__modal works-modal js-works-modal" data-modal-id="<?php echo $modal_id; ?>">
-        <div class="works-modal__inner">
-          <button class="works-modal__close-button js-works-modal__close-button" aria-label="<?php the_title(); ?>のモーダルを閉じる">
-            <span class="works-modal__close01"></span>
-            <span class="works-modal__close02"></span>
-          </button>
-          <div class="works-modal__container">
-            <h2 class="works-modal__heading">
-              <span class="works-modal__heading-en">Works</span>
-              <span class="works-modal__heading-jp">制作実績詳細</span>
-            </h2>
-            <div class="works-modal__card">
-              <figure class="works-modal__image-wrapper">
-                <?php 
-                if (has_post_thumbnail()) {
-                  the_post_thumbnail('large');
-                } else {
-                  echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
-                }
-                ?>
-              </figure>
-              <h3><?php the_title(); ?></h3>
-              <?php if (get_field('url')): ?>
-                <a href="<?php the_field('url'); ?>" target="_blank" rel="noopener noreferrer" class="works-modal__client-url">
-                  URL: <?php the_field('url'); ?>
-                </a>
-              <?php endif; ?>
-              <div class="works-modal__text"><?php the_content(); ?></div>
-            </div>
+          <div class="works__modal works-modal js-works-modal" data-modal-id="<?php echo $modal_id; ?>">
+            <div class="works-modal__inner">
+              <button class="works-modal__close-button js-works-modal__close-button" aria-label="<?php the_title(); ?>のモーダルを閉じる">
+                <span class="works-modal__close01"></span>
+                <span class="works-modal__close02"></span>
+              </button>
+              <div class="works-modal__container">
+                <h2 class="works-modal__heading">
+                  <span class="works-modal__heading-en">Works</span>
+                  <span class="works-modal__heading-jp">制作実績詳細</span>
+                </h2>
+                <div class="works-modal__card">
+                  <figure class="works-modal__image-wrapper">
+                    <?php
+                    if (has_post_thumbnail()) {
+                      the_post_thumbnail('large');
+                    } else {
+                      echo '<img src="' . get_theme_file_uri() . '/assets/images/common/no-image.png" alt="No Image">';
+                    }
+                    ?>
+                  </figure>
+                  <h3><?php the_title(); ?></h3>
+                  <?php if (get_field('url')): ?>
+                    <a href="<?php the_field('url'); ?>" target="_blank" rel="noopener noreferrer" class="works-modal__client-url">
+                      URL: <?php the_field('url'); ?>
+                    </a>
+                  <?php endif; ?>
+                  <div class="works-modal__text"><?php the_content(); ?></div>
+                </div>
 
-            <!-- 詳細項目 -->
-            <div class="works-modal__details">
-              <dl class="works-modal__details-wrapper">
-                <dt class="works-modal__index">クライアント</dt>
-                <dd class="works-modal__text"><?php the_field('client'); ?></dd>
-              </dl>
-              <dl class="works-modal__details-wrapper">
-                <dt class="works-modal__index">制作時間</dt>
-                <dd class="works-modal__text"><?php the_field('time'); ?></dd>
-              </dl>
-              <dl class="works-modal__details-wrapper">
-                <dt class="works-modal__index">使用言語</dt>
-                <dd class="works-modal__text"><?php the_field('language'); ?></dd>
-              </dl>
-              <dl class="works-modal__details-wrapper">
-                <dt class="works-modal__index">担当範囲</dt>
-                <dd class="works-modal__text"><?php the_field('scope'); ?></dd>
-              </dl>
-              <dl class="works-modal__details-wrapper">
-                <dt class="works-modal__index">制作背景</dt>
-                <dd class="works-modal__text"><?php the_field('background'); ?></dd>
-              </dl>
-            </div>
+                <!-- 詳細項目 -->
+                <div class="works-modal__details">
+                  <dl class="works-modal__details-wrapper">
+                    <dt class="works-modal__index">クライアント</dt>
+                    <dd class="works-modal__text"><?php the_field('client'); ?></dd>
+                  </dl>
+                  <dl class="works-modal__details-wrapper">
+                    <dt class="works-modal__index">制作時間</dt>
+                    <dd class="works-modal__text"><?php the_field('time'); ?></dd>
+                  </dl>
+                  <dl class="works-modal__details-wrapper">
+                    <dt class="works-modal__index">使用言語</dt>
+                    <dd class="works-modal__text"><?php the_field('language'); ?></dd>
+                  </dl>
+                  <dl class="works-modal__details-wrapper">
+                    <dt class="works-modal__index">担当範囲</dt>
+                    <dd class="works-modal__text"><?php the_field('scope'); ?></dd>
+                  </dl>
+                  <dl class="works-modal__details-wrapper">
+                    <dt class="works-modal__index">制作背景</dt>
+                    <dd class="works-modal__text"><?php the_field('background'); ?></dd>
+                  </dl>
+                </div>
 
-            <!-- 実績一覧へ戻る -->
-            <div class="works-modal__button-to-list">
-              <a href="#works" class="button button--to-works-list"><span>実績一覧</span></a>
+                <!-- 実績一覧へ戻る -->
+                <div class="works-modal__button-to-list">
+                  <a href="#works" class="button button--to-works-list"><span>実績一覧</span></a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <?php endwhile; wp_reset_postdata(); endif; ?>
+      <?php endwhile;
+        wp_reset_postdata();
+      endif; ?>
     </div>
   </section>
 
@@ -490,6 +493,8 @@
       </div>
       <!-- お問い合わせフォーム -->
       <?php echo do_shortcode('[contact-form-7 id="27928e8" title="お問い合わせ"]'); ?>
+
+
     </div>
   </section>
   <!-- TOPへ戻るボタン -->

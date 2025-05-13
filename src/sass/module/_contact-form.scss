@@ -72,38 +72,43 @@
 /* チェックボックス
 /* ============================================ */
 
-.checkbox-group {
-  margin-top: rem(10); 
+// CodeUpsからコピペ
+// Contact form 7のCSS
+// チェックボックスのラベル（ボックスとテキスト）のコンテナ
+.wpcf7-list-item {
+  display: block;
+  margin-left: 0; //デフォルトの余白を消す
+  margin-bottom: rem(2);
 }
 
-.check-test { //inputタグ
+// チェックボックスのラベル（ボックスとテキスト）
+.wpcf7-list-item label {
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  padding-left: rem(22);//枠14+余白8
+  position: relative;
+  margin-bottom: rem(2);//4→2 ピクパ調整
+  cursor: pointer;
+}
+
+// お問い合わせ項目のチェックボックススタイル
+input[type="checkbox"].contact-form__checkbox-inquiry {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
-// inputとラベルのテキスト
-.check-label {
-  position: relative;
-  display: inline-block;
-  padding-left: rem(30); //box用のスペースを確保
-  margin-bottom: rem(5);
-  cursor: pointer;
+input[type="acceptance"].contact-form__checkbox-privacy {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
-// チェックボックスラベル（フォント）
-.check-label-span {
-  font-family: $base-font-family;
-  font-size: rem(16);
-  color: $color-font;
-  font-weight: $normal;
-  line-height: 1.5;
-    @include mq(md) {
-    font-size: rem(18);
-    }
-}
-//チェックボックスのカスタムデザイン
-.check-label-span::before {
+// チェックボックスの枠
+.wpcf7-list-item-label::before {
   content: "";
   display: inline-block;
   width: rem(20);
@@ -117,29 +122,136 @@
   transform: translateY(-50%);
 }
 
-//チェックされた時の枠の色
-.check-test:checked + .check-label-span::before {
-  border-color: #3498db;
+// // 承諾確認のチェックボックスの枠
+.contact-form__checkbox-privacy + .wpcf7-list-item-label::before {
+  // content: "";
+  // display: inline-block;
+  // width: 14px;
+  // height: 14px;
+  // border: 1px solid $green;
+  // position: absolute;
+  // left: 0;
+  // top: 50%;
+  // transform: translateY(-50%);
 }
 
-// チェックマークのカスタムデザイン
-.check-test:checked + .check-label-span::after {
+
+
+// チェック後のチェックマーク
+// checkbox-inquiry（お問い合わせ項目）のチェックボックス
+// （複数選択）は配列形式[]が必要
+input[type="checkbox"][name="checkbox-inquiry[]"]:checked + .wpcf7-list-item-label::after {
   content: "";
   display: block;
-  width: 5px;
-  height: 10px;
-  border: solid $green;
-  border-width: 0 2px 2px 0;
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: 2px solid #C94800;
+  border-bottom: 2px solid #C94800;
   position: absolute;
   top: 50%;
-  left: rem(8); //位置は調整する
-  transform: translateY(-50%) rotate(45deg);
+  left: 3px;
+  transform: translateY(-50%) rotate(-45deg); // 中央からのオフセットと角度調整
+} 
+// チェック後のチェックマーク
+// checkbox-privacy（プライバシー）のチェックボックス
+input[type="checkbox"][name="checkbox-privacy"]:checked + .wpcf7-list-item-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: 2px solid #C94800;
+  border-bottom: 2px solid #C94800;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%) rotate(-45deg); /* 中央からのオフセットと角度調整 */
 }
 
-// チェックボックスがフォーカスされた時の枠の色
-.check-test:focus + .check-label-span::before {
-  outline: 2px solid #3498db; 
+
+.checkbox-error {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: #C94800;
+  font-weight: $normal;
 }
+// CodeUpsからコピペ　ここまで
+
+
+// 下記はWP化前のコード
+// .checkbox-group {
+//   margin-top: rem(10); 
+// }
+
+// .check-test { //inputタグ
+//   position: absolute;
+//   opacity: 0;
+//   z-index: -1;
+// }
+
+// // inputとラベルのテキスト
+// .check-label {
+//   position: relative;
+//   display: inline-block;
+//   padding-left: rem(30); //box用のスペースを確保
+//   margin-bottom: rem(5);
+//   cursor: pointer;
+// }
+
+// // チェックボックスラベル（フォント）
+// .check-label-span {
+//   font-family: $base-font-family;
+//   font-size: rem(16);
+//   color: $color-font;
+//   font-weight: $normal;
+//   line-height: 1.5;
+//     @include mq(md) {
+//     font-size: rem(18);
+//     }
+// }
+// //チェックボックスのカスタムデザイン
+// .check-label-span::before {
+//   content: "";
+//   display: inline-block;
+//   width: rem(20);
+//   height: rem(20);
+//   background-color: $white;
+//   border: 1px solid $green;
+//   border-radius: rem(4);
+//   position: absolute;
+//   left: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// //チェックされた時の枠の色
+// .check-test:checked + .check-label-span::before {
+//   border-color: #3498db;
+// }
+
+// // チェックマークのカスタムデザイン
+// .check-test:checked + .check-label-span::after {
+//   content: "";
+//   display: block;
+//   width: 5px;
+//   height: 10px;
+//   border: solid $green;
+//   border-width: 0 2px 2px 0;
+//   position: absolute;
+//   top: 50%;
+//   left: rem(8); //位置は調整する
+//   transform: translateY(-50%) rotate(45deg);
+// }
+
+// // チェックボックスがフォーカスされた時の枠の色
+// .check-test:focus + .check-label-span::before {
+//   outline: 2px solid #3498db; 
+// }
 
 .contact-form__privacy-text {
   font-family: $base-font-family;
