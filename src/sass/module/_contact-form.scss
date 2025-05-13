@@ -159,8 +159,6 @@
     }
 }
 
-
-// 提案されたコード
 // input本体（透明化＆絶対配置）
 .wpcf7-list-item input[type="checkbox"] {
   position: absolute;
@@ -269,22 +267,14 @@
   display: block;
   font-family: $base-font-family;
   font-size: rem(14);
-  // color: $error-message-color;
   color: #ff0000;
   font-weight: $normal;
   margin-top: rem(8);
 }
 
-// エラーメッセージ上の余白
-// dd span {
-//   display: block;
-//   margin-top: rem(8);
-// }
-
 .errored {
   border: 1px solid #C94800;
   background: rgba(201, 72, 0, 0.20);
-  // color: #fff;
 }
 
 // 必須項目に入力がなく、送信できない時のボタンの色
