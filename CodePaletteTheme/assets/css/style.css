@@ -693,9 +693,18 @@ a {
 /* 送信ボタン
 /* ============================================ */
 
+.contact-form__button,
+.contact-form__button p {
+	text-align: center;
+}
+
 .contact-form__button {
 	margin-top: 2.5rem;
 	text-align: center;
+}
+
+.wpcf7-spinner {
+	display: none;
 }
 
 /* ============================================

@@ -248,11 +248,21 @@
 /* ============================================
 /* 送信ボタン
 /* ============================================ */
+.contact-form__button,
+.contact-form__button p {
+  text-align: center;
+}
 
 .contact-form__button {
   margin-top: rem(40);
   text-align: center;
 }
+
+// ボタンの右横に自動出力されたスピナーを非表示
+.wpcf7-spinner {
+  display: none;
+}
+
 
 /* ============================================
 /* エラー時のスタイル
