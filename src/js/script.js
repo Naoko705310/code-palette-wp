@@ -52,6 +52,30 @@ jQuery(function ($) {
   });
 
   /* --------------------------------------------
+  /* 言語ボタン
+  /* -------------------------------------------- */
+  jQuery(document).ready(function ($) {
+    // 切り替えボタンをクリックしたとき
+    $('.lang-switcher__toggle').on('click', function (e) {
+      e.stopPropagation(); // 外側のクリックイベントを止める
+  
+      const $menu = $(this).next('.lang-switcher__menu');
+  
+      // 他の開いてるメニューを閉じる
+      $('.lang-switcher__menu').not($menu).slideUp(200);
+  
+      // 現在のメニューをトグル
+      $menu.stop(true, true).slideToggle(200);
+    });
+  
+    // 外側クリックでメニューを閉じる
+    $(document).on('click', function () {
+      $('.lang-switcher__menu').slideUp(200);
+    });
+  });
+  
+
+  /* --------------------------------------------
   /* トップページのFVスワイパー
   /* -------------------------------------------- */
   var topFvSwiper = new Swiper(".js-top-fv-swiper", {
