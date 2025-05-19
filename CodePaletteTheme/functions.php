@@ -123,3 +123,21 @@ function enable_custom_fields_for_works() {
   add_post_type_support('works', 'custom-fields');
 }
 add_action('init', 'enable_custom_fields_for_works');
+
+function custom_front_page_template($template) {
+  if (function_exists('pll_current_language') && is_front_page()) {
+      $lang = pll_current_language();
+      $new_template = locate_template(array("front-page-{$lang}.php"));
+      if (!empty($new_template)) {
+          return $new_template;
+      }
+  }
+  return $template;
+}
+add_filter('template_include', 'custom_front_page_template');
+
+
+/* --------------------------------------------
+/* 
+/* -------------------------------------------- */
+
