@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.lang-switcher {
+  display: flex;
+  gap: rem(8);
+  align-items: center;
+  margin-left: rem(16);
+}
+
+.lang-switcher li {
+  list-style: none;
+}
+
+.lang-switcher a {
+  display: inline-block;
+  padding: rem(4) rem(8);
+  border-radius: rem(4);
+  background-color: #f0f0f0;
+  text-decoration: none;
+  font-size: rem(16);
+}
+
+.lang-switcher a:hover {
+  background-color: #ddd;
+}

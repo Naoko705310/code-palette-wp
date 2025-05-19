@@ -29,3 +29,10 @@
     padding: 0 rem(20) 0 rem(40);
   }
 }
+
+.header__lang-switcher.lang-switcher {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}

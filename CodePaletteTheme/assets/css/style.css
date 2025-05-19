@@ -876,12 +876,41 @@ a {
 	width: 100%;
 }
 
+.header__lang-switcher.lang-switcher {
+	display: none;
+}
+
 .inner {
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 100%;
+}
+
+.lang-switcher {
+	align-items: center;
+	display: flex;
+	gap: 0.5rem;
+	margin-left: 1rem;
+}
+
+.lang-switcher li {
+	list-style: none;
+}
+
+.lang-switcher a {
+	-webkit-text-decoration: none;
+	background-color: #f0f0f0;
+	border-radius: 0.25rem;
+	display: inline-block;
+	font-size: 1rem;
+	padding: 0.25rem 0.5rem;
+	text-decoration: none;
+}
+
+.lang-switcher a:hover {
+	background-color: #ddd;
 }
 
 .my-skills__items {
@@ -1886,6 +1915,10 @@ html {
 
 .header__inner {
 	padding: 0 1.25rem 0 2.5rem;
+}
+
+.header__lang-switcher.lang-switcher {
+	display: block;
 }
 
 .inner {
