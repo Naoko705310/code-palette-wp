@@ -30,9 +30,10 @@
   }
 }
 
-.header__lang-switcher.lang-switcher {
-  display: none;
-  @include mq(md) {
-    display: block;
-  }
-}
+// 言語切り替えボタン（PCの時だけ表示）
+// .header__lang-switcher.lang-switcher {
+//   display: none;
+//   @include mq(md) {
+//     display: block;
+//   }
+// }
