@@ -889,8 +889,9 @@ a {
 }
 
 .lang-switcher-dropdown {
+	border: 1px solid;
 	display: inline-block;
-	font-size: 14px;
+	padding: 0.5rem;
 	position: relative;
 }
 
@@ -898,11 +899,29 @@ a {
 	align-items: center;
 	background: white;
 	border: 1px solid #ccc;
+	color: #615F5F;
 	cursor: pointer;
 	display: flex;
-	font-weight: bold;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 400;
 	gap: 0.5em;
-	padding: rem(8);
+	padding-left: 2em;
+	position: relative;
+}
+
+.lang-switcher__toggle::before {
+	background-image: url("../images/common/language.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: inline-block;
+	height: 16px;
+	left: 0.75em;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 16px;
 }
 
 .lang-switcher__menu {

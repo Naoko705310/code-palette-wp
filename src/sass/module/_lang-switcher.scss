@@ -1,21 +1,44 @@
-// @use "global" as *;
+@use "global" as *;
 
 .lang-switcher-dropdown {
   position: relative;
   display: inline-block;
-  font-size: 14px;
+  background: white;
+  border: 1px solid $color-main;
+  padding: rem(8);
+  // font-family: $base-font-family;
+  // font-size: rem(14);
+  // color: $color-font;
+  // font-weight: $normal;
 }
 
 .lang-switcher__toggle {
-  background: white;
-  border: 1px solid #ccc;
-  padding: rem(8);
-  cursor: pointer;
-  font-weight: bold;
+  position: relative;
+  padding-left: 2em;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $color-font;
+  font-weight: $normal;
   display: flex;
   align-items: center;
   gap: 0.5em;
+  cursor: pointer;
 }
+
+.lang-switcher__toggle::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../images/common/language.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0.75em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 .lang-switcher__menu {
   position: absolute;
