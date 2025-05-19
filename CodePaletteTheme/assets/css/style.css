@@ -901,6 +901,18 @@ a {
 	position: relative;
 }
 
+.lang-switcher-dropdown:hover {
+	background: #08AAC6;
+}
+
+.lang-switcher-dropdown:hover .lang-switcher__toggle {
+	color: #fff;
+}
+
+.lang-switcher-dropdown:hover .lang-switcher__toggle::before {
+	background-image: url("../images/common/language-white.png");
+}
+
 .lang-switcher__toggle {
 	align-items: center;
 	color: #615F5F;

@@ -13,6 +13,18 @@
   }
 }
 
+.lang-switcher-dropdown:hover {
+  background: #08AAC6;
+}
+
+.lang-switcher-dropdown:hover .lang-switcher__toggle {
+  color: #fff;
+}
+
+.lang-switcher-dropdown:hover .lang-switcher__toggle::before {
+  background-image: url("../images/common/language-white.png");
+}
+
 // 言語ボタンの中身（テキスト）
 .lang-switcher__toggle {
   position: relative;
