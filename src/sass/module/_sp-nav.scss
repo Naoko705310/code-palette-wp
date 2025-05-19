@@ -54,6 +54,11 @@
 }
 
 // 言語切り替えボタン
+.lang-switcher-dropdown {
+  @include mq(md) {
+    display: none;
+  }
+}
 // .sp-nav__lang-switcher {
 //   @include mq(md) {
 //     display: none;
