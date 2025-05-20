@@ -293,62 +293,62 @@ get_header();
       <!-- スキル -->
       <div class="service-details__heading">
         <h2 class="service-details__title">
-          スキル<span>skills</span>
+          Skills<span>skills</span>
         </h2>
       </div>
       <div class="service-details__text">
-        <p>Web制作に必要な一般的な知識・技術はもちろん、常に最新のITツールやトレンドを取り入れながら、より良い制作を心がけています。</p>
+        <p>While maintaining essential web development knowledge and skills, we continuously incorporate the latest IT tools and trends to deliver better results.</p>
       </div>
       <div class="service-details__icon-wrapper">
         <ul class="service-details__items">
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-html-5.svg" alt="htmlのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-html-5.svg" alt="HTML icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-css-3.svg" alt="cssのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-css-3.svg" alt="CSS icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-jquery.svg" alt="jQueryのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-jquery.svg" alt="jQuery icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-javascript.svg" alt="javascriptのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-javascript.svg" alt="JavaScript icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-wordpress.svg" alt="WordPressのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-wordpress.svg" alt="WordPress icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-sass.svg" alt="Sassのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-sass.svg" alt="Sass icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-figma.svg" alt="Figmaのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-figma.svg" alt="Figma icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-github.svg" alt="GitHubのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-github.svg" alt="GitHub icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-filezilla.svg" alt="Filezillaのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-filezilla.svg" alt="FileZilla icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-gulp.svg" alt="gulpのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-gulp.svg" alt="Gulp icon" width="48" height="48">
             </figure>
           </li>
         </ul>
@@ -357,45 +357,45 @@ get_header();
       <!-- コミュニケーション -->
       <div class="service-details__heading">
         <h2 class="service-details__title">
-          業務報告・連絡方法について<span>communication</span>
+          Communication & Reporting<span>communication</span>
         </h2>
       </div>
       <div class="service-details__text">
-        <p>国内外のお客様とスムーズにご連絡・お打ち合わせが可能です。</p>
-        <p>また、海外在住経験を活かし、英語・タイ語対応を含む海外案件にも柔軟に対応しています。</p>
-        <p>ご希望のツール（メール、チャット、オンラインミーティングなど）で対応いたしますので、お気軽にご相談ください。</p>
+        <p>We can communicate and meet smoothly with clients both in Japan and overseas.</p>
+        <p>Drawing from our international experience, we can flexibly handle overseas projects, including English and Thai language support.</p>
+        <p>We can accommodate your preferred communication tools (email, chat, online meetings, etc.), so please feel free to discuss your needs.</p>
       </div>
 
       <div class="service-details__icon-wrapper">
         <ul class="service-details__items">
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-mail.svg" alt="mailのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-mail.svg" alt="Email icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-line.png" alt="lineのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-line.png" alt="LINE icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-chatwork.svg" alt="chatworkのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-chatwork.svg" alt="Chatwork icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-slack.svg" alt="slackのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-slack.svg" alt="Slack icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-zoom.svg" alt="zoomのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-zoom.svg" alt="Zoom icon" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-google-meet.svg" alt="meetのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-google-meet.svg" alt="Google Meet icon" width="48" height="48">
             </figure>
           </li>
         </ul>
@@ -403,28 +403,28 @@ get_header();
 
       <div class="service-details__list">
         <dl>
-          <dt>連絡可能時間</dt>
-          <dd>平日 9:00〜18:00 （その他の時間帯も事前にご相談いただければ柔軟に対応可能です）</dd>
+          <dt>Available Hours</dt>
+          <dd>Weekdays 9:00 AM - 6:00 PM (We can be flexible with other hours by prior arrangement)</dd>
         </dl>
         <dl>
-          <dt>平均稼働時間</dt>
-          <dd>平日は概ねフルタイムで対応しております。繁忙期や案件状況により異なる場合は事前にご案内いたします。</dd>
+          <dt>Average Working Hours</dt>
+          <dd>We generally work full-time on weekdays. We will inform you in advance if this varies due to busy periods or project requirements.</dd>
         </dl>
         <dl>
-          <dt>定休日</dt>
-          <dd>土日・祝日（案件の状況により、休日対応も可能ですのでご相談ください）</dd>
+          <dt>Regular Days Off</dt>
+          <dd>Weekends and holidays (We can work on holidays depending on project needs - please consult with us)</dd>
         </dl>
         <dl>
-          <dt>勤務形態</dt>
-          <dd>完全在宅勤務にて、オンラインで対応しています。</dd>
+          <dt>Work Style</dt>
+          <dd>We work remotely and provide all services online.</dd>
         </dl>
         <dl>
-          <dt>連絡方法</dt>
-          <dd>メール、LINE、Chatwork、Slack、Zoom、Google Meetなど各種オンラインツールに対応しています。</dd>
+          <dt>Communication Methods</dt>
+          <dd>We support various online tools including email, LINE, Chatwork, Slack, Zoom, and Google Meet.</dd>
         </dl>
         <dl>
-          <dt>その他</dt>
-          <dd>英語・タイ語でのメールのやりとり、電話連絡、オンライン会議などが可能です。ウェブサイト制作と共に、タイへの事業拡大をご検討中のお客様など、会議にタイ人スタッフが入る場合は、会議中の日・タイ通訳のお手伝いなどもできますので、ぜひご相談ください。</dd>
+          <dt>Additional Services</dt>
+          <dd>We can handle email correspondence, phone calls, and online meetings in English and Thai. For clients considering business expansion to Thailand, we can also provide Japanese-Thai interpretation during meetings with Thai staff. Please feel free to discuss your needs.</dd>
         </dl>
       </div>
 
