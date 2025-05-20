@@ -436,36 +436,36 @@ get_header();
     <div class="about__inner inner">
       <h2 class="service__section-title section-title">
         <span class="section-title__en">about</span>
-        <span class="section-title__jp">私について</span>
+        <span class="section-title__jp">About Me</span>
       </h2>
       <!-- カード風プロフィール -->
       <div class="about__card">
         <figure class="about__card-image">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/naoko-profile.jpg" alt="鴨川直子の写真" width="400" height="400">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/naoko-profile.jpg" alt="Photo of Naoko Kamogawa" width="400" height="400">
         </figure>
 
         <div class="about__card-info">
-          <h3 class="about__name">鴨川直子<span>（かもがわ なおこ）</span></h3>
-          <p class="about__position">Web制作者・通訳・翻訳</p>
-          <p>広告代理店での営業・進行管理を経て、現在はWeb制作と翻訳を中心に活動中。</p>
-          <p>タイ・アメリカでの海外生活で培った多言語・多文化への理解を活かし、英語・タイ語を含むWebサイト制作を得意としています。</p>
-          <p>構成から翻訳・実装まで、ワンストップで対応可能です。</p>
-          <p>趣味は油絵やイラスト、手芸などのものづくり。</p>
+          <h3 class="about__name">Naoko Kamogawa<span>(かもがわ なおこ)</span></h3>
+          <p class="about__position">Web Developer, Interpreter & Translator</p>
+          <p>After working in sales and project management at an advertising agency, I now focus on web development and translation.</p>
+          <p>Drawing from my experience living in Thailand and the United States, I specialize in creating multilingual websites in English and Thai, leveraging my understanding of different languages and cultures.</p>
+          <p>I can handle everything from planning to translation and implementation in a one-stop service.</p>
+          <p>My hobbies include oil painting, illustration, and various crafts.</p>
         </div>
       </div>
       <div class="about__my-skills my-skills">
         <ul class="my-skills__items">
           <li class="my-skills__item">
-            <h4>技術スキル</h4>
-            <p>HTML / CSS / JavaScript / jQuery / Sass / WordPress / GitHub など</p>
+            <h4>Technical Skills</h4>
+            <p>HTML / CSS / JavaScript / jQuery / Sass / WordPress / GitHub and more</p>
           </li>
           <li class="my-skills__item">
-            <h4>その他スキル・経験</h4>
+            <h4>Other Skills & Experience</h4>
             <ul class="my-skills__others">
-              <li>英語・タイ語による翻訳・通訳経験</li>
-              <li>広告代理店での企画提案・プロジェクト管理経験</li>
-              <li>文化や言葉の違いに配慮した多言語Webサイトの制作</li>
-              <li>知的財産管理技能士3級などの資格保有</li>
+              <li>Translation and interpretation experience in English and Thai</li>
+              <li>Project planning and management experience at an advertising agency</li>
+              <li>Development of multilingual websites with consideration for cultural and linguistic differences</li>
+              <li>Certified Intellectual Property Management Professional (Level 3)</li>
             </ul>
           </li>
         </ul>
