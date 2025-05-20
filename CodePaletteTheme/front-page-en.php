@@ -482,14 +482,14 @@ get_header();
           contact
         </span>
         <span class="section-title__jp">
-          お問い合わせ
+          Contact Us
         </span>
       </h2>
       <div class="contact__text-wrapper">
         <p>
-          ホームページ制作のご依頼やご相談、ご質問等がございましたら、お気軽にお問い合わせください。原則、72時間以内に返信いたします。
+          Please feel free to contact us for website development inquiries, consultations, or any questions you may have. We typically respond within 72 hours.
         </p>
-        <p>返信が無い場合は、恐れ入りますが迷惑メールフォルダの中をご確認お願いいたします。</p>
+        <p>If you don't receive a response, please check your spam folder.</p>
       </div>
       <!-- お問い合わせフォーム -->
       <?php echo do_shortcode('[contact-form-7 id="27928e8" title="お問い合わせ"]'); ?>
@@ -500,7 +500,7 @@ get_header();
   <!-- TOPへ戻るボタン -->
   <a href="#top" class="js-button-to-top button-to-top">
     <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-symbol.png" alt="Logo" width="48" height="48">
-    <span>TOPへ<br>もどる</span>
+    <span>Back to<br>Top</span>
   </a>
 </main>
 <?php get_footer(); ?>
