@@ -436,7 +436,7 @@ get_header();
     <div class="about__inner inner">
       <h2 class="service__section-title section-title">
         <span class="section-title__en">about</span>
-        <span class="section-title__jp">About Me</span>
+        <span class="section-title__jp">私について</span>
       </h2>
       <!-- カード風プロフィール -->
       <div class="about__card">
@@ -482,7 +482,7 @@ get_header();
           contact
         </span>
         <span class="section-title__jp">
-          Contact Us
+          お問い合わせ
         </span>
       </h2>
       <div class="contact__text-wrapper">
