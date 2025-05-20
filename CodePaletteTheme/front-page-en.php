@@ -58,34 +58,34 @@ get_header();
       </h2>
 
       <div class="concept__intro">
-        <p>Webサイトの多言語対応は、外国人のお客様だけのためのものではありません。</p>
-        <p>言葉だけでなく<span class="concept__highlight">「誰にでもわかりやすい構成や案内」</span>を見直すきっかけにもなり、<br class="u-desktop">
-          その結果、日本人のお客様にとっても親切で使いやすいサイトづくりにつながります。</p>
+        <p>Multilingual website support is not just for foreign customers.</p>
+        <p>It's an opportunity to review not only language but also <span class="concept__highlight">"clear structure and guidance for everyone"</span>,<br class="u-desktop">
+          resulting in creating websites that are friendly and easy to use for Japanese customers as well.</p>
       </div>
       <!-- コンセプトのカード -->
       <ul class="concept__points">
         <li>
-          外国のお客様にも<br>安心して利用いただける
+          Easy to use and<br>understand for foreign customers
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/globe.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/globe.svg" alt="Icon" width="100" height="100">
           </div>
         </li>
         <li>
-          スタッフの不安を減らし、<br>現場をスムーズに
+          Empowering staff to handle<br>foreign customers with confidence
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/staff.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/staff.svg" alt="Icon" width="100" height="100">
           </div>
         </li>
         <li>
-          多言語化をきっかけに<br>日本語サイトもより親切に
+          Making Japanese sites<br>more user-friendly
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/website.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/website.svg" alt="Icon" width="100" height="100">
           </div>
         </li>
       </ul>
       <p class="concept__summary">
-        単なる翻訳ではなく、文化や使いやすさを意識した
-        「伝わるサイトづくり」をサポートします。
+        We support "website creation that truly communicates" by considering not just translation,
+        but also culture and usability.
       </p>
     </div>
   </section>
@@ -100,11 +100,11 @@ get_header();
       </h2>
       <div class="works__heading">
         <p>
-          制作実績の一例です。クリックすると詳細が開きます。<br>
-          何かご質問がございましたら、いつでもお問い合わせフォームよりご連絡ください。
+          Here are some examples of our work. Click to see details.<br>
+          If you have any questions, please feel free to contact us through the contact form.
         </p>
       </div>
-      <p class="works__heading--remark">※現在制作中の案件と、許可をいただいていない案件については掲載しておりません。</p>
+      <p class="works__heading--remark">*Projects currently in progress and those without permission are not listed.</p>
 
       <!-- 制作実績一覧 -->
       <div class="works__contents-wrapper">
@@ -155,14 +155,14 @@ get_header();
       ?>
           <div class="works__modal works-modal js-works-modal" data-modal-id="<?php echo $modal_id; ?>">
             <div class="works-modal__inner">
-              <button class="works-modal__close-button js-works-modal__close-button" aria-label="<?php the_title(); ?>のモーダルを閉じる">
+              <button class="works-modal__close-button js-works-modal__close-button" aria-label="Close modal for <?php the_title(); ?>">
                 <span class="works-modal__close01"></span>
                 <span class="works-modal__close02"></span>
               </button>
               <div class="works-modal__container">
                 <h2 class="works-modal__heading">
                   <span class="works-modal__heading-en">Works</span>
-                  <span class="works-modal__heading-jp">制作実績詳細</span>
+                  <span class="works-modal__heading-jp">Project Details</span>
                 </h2>
                 <div class="works-modal__card">
                   <figure class="works-modal__image-wrapper">
@@ -186,30 +186,30 @@ get_header();
                 <!-- 詳細項目 -->
                 <div class="works-modal__details">
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">クライアント</dt>
+                    <dt class="works-modal__index">Client</dt>
                     <dd class="works-modal__text"><?php the_field('client'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">制作時間</dt>
+                    <dt class="works-modal__index">Production Time</dt>
                     <dd class="works-modal__text"><?php the_field('time'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">使用言語</dt>
+                    <dt class="works-modal__index">Languages Used</dt>
                     <dd class="works-modal__text"><?php the_field('language'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">担当範囲</dt>
+                    <dt class="works-modal__index">Scope of Work</dt>
                     <dd class="works-modal__text"><?php the_field('scope'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">制作背景</dt>
+                    <dt class="works-modal__index">Project Background</dt>
                     <dd class="works-modal__text"><?php the_field('background'); ?></dd>
                   </dl>
                 </div>
 
                 <!-- 実績一覧へ戻る -->
                 <div class="works-modal__button-to-list">
-                  <a href="#works" class="button button--to-works-list"><span>実績一覧</span></a>
+                  <a href="#works" class="button button--to-works-list"><span>Back to Works</span></a>
                 </div>
               </div>
             </div>
