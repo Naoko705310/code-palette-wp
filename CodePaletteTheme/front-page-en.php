@@ -230,9 +230,9 @@ get_header();
       </h2>
 
       <div class="service__heading">
-        <p>コーディング・Webサイト制作・多言語対応を軸に、事業者様や制作者様の「あと一歩」をサポートします。</p>
-        <p class="service__heading--sub">制作会社様やデザイナー様の右腕として、また個人事業主様の良きパートナーとして、<br class="u-desktop">丁寧かつ柔軟にご要望にお応えいたします。</p>
-        <p class="service__heading--sub">また、英語・タイ語を含む多言語サイト制作においては、単なる翻訳ではなく、<br class="u-desktop">外国の方にも本当に伝わりやすく、使いやすい構成・デザインをご提案します。</p>
+        <p>We support businesses and creators in taking that "next step" through coding, website development, and multilingual solutions.</p>
+        <p class="service__heading--sub">As a reliable partner for production companies, designers, and individual business owners,<br class="u-desktop">we carefully and flexibly respond to your needs.</p>
+        <p class="service__heading--sub">For multilingual website development including English and Thai, we go beyond mere translation<br class="u-desktop">to propose structures and designs that are truly easy to understand and use for foreign users.</p>
       </div>
 
       <div class="service__contents-wrapper">
@@ -241,45 +241,45 @@ get_header();
           <li class="service-cards__item">
             <div class="service-card service-card--01">
               <h2 class="service-card__title">Multilingual</h2>
-              <h3 class="service-card__title-sub">多言語対応Webサイト制作</h3>
-              <p class="service-card__text">英語・タイ語・日本語に対応したWebサイトの企画・構成・デザイン・実装を行います。</p>
-              <p class="service-card__text">文化や言語の違いを考慮したユーザー導線設計と、翻訳＋制作をワンストップでサポートします。</p>
-              <p class="service-card__text">小規模サイト・LP・ブログなども柔軟に対応可能です。</p>
+              <h3 class="service-card__title-sub">Multilingual Website Development</h3>
+              <p class="service-card__text">We handle planning, structure, design, and implementation of websites in English, Thai, and Japanese.</p>
+              <p class="service-card__text">We provide one-stop support for translation and development, with user journey design that considers cultural and linguistic differences.</p>
+              <p class="service-card__text">We can flexibly handle small-scale sites, landing pages, blogs, and more.</p>
             </div>
           </li>
           <!-- ウェブサイト制作 -->
           <li class="service-cards__item">
             <div class="service-card service-card--02">
               <h2 class="service-card__title">Website</h2>
-              <h3 class="service-card__title-sub">Webサイト制作
-                <span class="service-card__title-sub--remark">（一般・WordPress）</span>
+              <h3 class="service-card__title-sub">Website Development
+                <span class="service-card__title-sub--remark">(Standard & WordPress)</span>
               </h3>
-              <p class="service-card__text">コーポレートサイトやポートフォリオサイトなど、目的に合わせたWebサイトを制作します。</p>
-              <p class="service-card__text">静的HTMLサイト、WordPressオリジナルテーマ、既存WordPressサイトのカスタマイズまで幅広く対応可能です。</p>
-              <p class="service-card__text">広告代理店での経験を生かし、デザイン〜公開・運用まで責任を持ってサポートします。</p>
+              <p class="service-card__text">We create websites tailored to your purpose, from corporate sites to portfolio websites.</p>
+              <p class="service-card__text">We handle everything from static HTML sites to custom WordPress themes and existing WordPress site customization.</p>
+              <p class="service-card__text">Drawing from our advertising agency experience, we provide comprehensive support from design to launch and maintenance.</p>
             </div>
           </li>
           <!-- コーディング代行 -->
           <li class="service-cards__item">
             <div class="service-card service-card--03">
               <h2 class="service-card__title">Coding</h2>
-              <h3 class="service-card__title-sub">コーディング代行</h3>
-              <p class="service-card__text">制作会社様・Webデザイナー様向けに、デザインカンプからの正確で保守性の高いコーディングを行います。</p>
-              <p class="service-card__text">CSS設計の原則を守り、再利用しやすく、長期運用にも耐えるコードを意識しています。</p>
-              <p class="service-card__text">小規模案件やポートフォリオ用コーディングなどもお気軽にご相談ください。</p>
+              <h3 class="service-card__title-sub">Coding Services</h3>
+              <p class="service-card__text">For production companies and web designers, we provide accurate and maintainable coding from design comps.</p>
+              <p class="service-card__text">We adhere to CSS design principles, creating reusable code that stands the test of time.</p>
+              <p class="service-card__text">Feel free to consult us about small projects or portfolio coding needs.</p>
             </div>
           </li>
           <!-- 翻訳サポート -->
           <li class="service-cards__item">
             <div class="service-card service-card--04">
               <h2 class="service-card__title">Translation</h2>
-              <h3 class="service-card__title-sub">翻訳サポート
-                <span class="service-card__title-sub--remark">（オプション）</span>
+              <h3 class="service-card__title-sub">Translation Support
+                <span class="service-card__title-sub--remark">(Optional)</span>
               </h3>
-              <p class="service-card__text">Webサイト内コンテンツの英語・タイ語翻訳を承ります。</p>
-              <p class="service-card__text">自然で読みやすく、文化的背景にも配慮した表現を心がけています。</p>
-              <p class="service-card__text">必要に応じた更新作業もサポート可能です（翻訳は文字数ベースでお見積もりします）。</p>
-              <p class="service-card__text">※英語・タイ語以外の言語の翻訳も相談に応じます。お気軽にお問い合わせください。</p>
+              <p class="service-card__text">We provide English and Thai translation services for website content.</p>
+              <p class="service-card__text">We strive for natural, readable expressions that consider cultural context.</p>
+              <p class="service-card__text">We can support content updates as needed (translation pricing is based on character count).</p>
+              <p class="service-card__text">*We can also discuss translation in languages other than English and Thai. Please feel free to inquire.</p>
             </div>
           </li>
         </ul>
