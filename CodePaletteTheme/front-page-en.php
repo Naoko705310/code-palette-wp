@@ -209,7 +209,7 @@ get_header();
 
                 <!-- 実績一覧へ戻る -->
                 <div class="works-modal__button-to-list">
-                  <a href="#works" class="button button--to-works-list"><span>Back to Works</span></a>
+                  <a href="#works" class="button button--to-works-list button--to-works-list-en"><span>Back to Works</span></a>
                 </div>
               </div>
             </div>
