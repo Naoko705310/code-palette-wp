@@ -59,8 +59,8 @@ get_header();
 
       <div class="concept__intro">
         <p>การทำเว็บไซต์ให้รองรับหลายภาษานั้น ไม่ได้มีไว้เพื่อผู้ใช้งานชาวต่างชาติเท่านั้น</p>
-        <p>แต่ยังเป็นโอกาสในการทบทวน<span class="concept__highlight">“โครงสร้างและคำแนะนำที่เข้าใจง่ายสำหรับทุกคน”</span><br class="u-desktop">
-        ซึ่งจะนำไปสู่การสร้างเว็บไซต์ที่ใช้งานสะดวกและเป็นมิตรต่อผู้ใช้งานชาวญี่ปุ่นด้วยเช่นกัน</p>
+        <p>แต่ยังเป็นโอกาสในการทบทวน<span class="concept__highlight">"โครงสร้างและคำแนะนำที่เข้าใจง่ายสำหรับทุกคน"</span><br class="u-desktop">
+          ซึ่งจะนำไปสู่การสร้างเว็บไซต์ที่ใช้งานสะดวกและเป็นมิตรต่อผู้ใช้งานชาวญี่ปุ่นด้วยเช่นกัน</p>
       </div>
       <!-- コンセプトのカード -->
       <ul class="concept__points">
@@ -186,30 +186,30 @@ get_header();
                 <!-- 詳細項目 -->
                 <div class="works-modal__details">
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">クライアント</dt>
+                    <dt class="works-modal__index">ลูกค้า</dt>
                     <dd class="works-modal__text"><?php the_field('client'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">制作時間</dt>
+                    <dt class="works-modal__index">ระยะเวลาการผลิต</dt>
                     <dd class="works-modal__text"><?php the_field('time'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">使用言語</dt>
+                    <dt class="works-modal__index">ภาษาที่ใช้</dt>
                     <dd class="works-modal__text"><?php the_field('language'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">担当範囲</dt>
+                    <dt class="works-modal__index">ขอบเขตความรับผิดชอบ</dt>
                     <dd class="works-modal__text"><?php the_field('scope'); ?></dd>
                   </dl>
                   <dl class="works-modal__details-wrapper">
-                    <dt class="works-modal__index">制作背景</dt>
+                    <dt class="works-modal__index">เบื้องหลังการผลิต</dt>
                     <dd class="works-modal__text"><?php the_field('background'); ?></dd>
                   </dl>
                 </div>
 
                 <!-- 実績一覧へ戻る -->
                 <div class="works-modal__button-to-list">
-                  <a href="#works" class="button button--to-works-list"><span>実績一覧</span></a>
+                  <a href="#works" class="button button--to-works-list"><span>รายการความสำเร็จ</span></a>
                 </div>
               </div>
             </div>
@@ -241,45 +241,45 @@ get_header();
           <li class="service-cards__item">
             <div class="service-card service-card--01">
               <h2 class="service-card__title">Multilingual</h2>
-              <h3 class="service-card__title-sub">多言語対応Webサイト制作</h3>
-              <p class="service-card__text">英語・タイ語・日本語に対応したWebサイトの企画・構成・デザイン・実装を行います。</p>
-              <p class="service-card__text">文化や言語の違いを考慮したユーザー導線設計と、翻訳＋制作をワンストップでサポートします。</p>
-              <p class="service-card__text">小規模サイト・LP・ブログなども柔軟に対応可能です。</p>
+              <h3 class="service-card__title-sub">การสร้างเว็บไซต์หลายภาษา</h3>
+              <p class="service-card__text">เราดำเนินการวางแผน โครงสร้าง การออกแบบ และการพัฒนาเว็บไซต์ที่รองรับภาษาอังกฤษ ภาษาไทย และภาษาญี่ปุ่น</p>
+              <p class="service-card__text">เราสนับสนุนการออกแบบเส้นทางผู้ใช้ที่คำนึงถึงความแตกต่างทางวัฒนธรรมและภาษา พร้อมทั้งการแปลและการผลิตในขั้นตอนเดียว</p>
+              <p class="service-card__text">เราสามารถรองรับเว็บไซต์ขนาดเล็ก หน้า Landing Page และบล็อกได้อย่างยืดหยุ่น</p>
             </div>
           </li>
           <!-- ウェブサイト制作 -->
           <li class="service-cards__item">
             <div class="service-card service-card--02">
               <h2 class="service-card__title">Website</h2>
-              <h3 class="service-card__title-sub">Webサイト制作
-                <span class="service-card__title-sub--remark">（一般・WordPress）</span>
+              <h3 class="service-card__title-sub">การสร้างเว็บไซต์
+                <span class="service-card__title-sub--remark">（ทั่วไป・WordPress）</span>
               </h3>
-              <p class="service-card__text">コーポレートサイトやポートフォリオサイトなど、目的に合わせたWebサイトを制作します。</p>
-              <p class="service-card__text">静的HTMLサイト、WordPressオリジナルテーマ、既存WordPressサイトのカスタマイズまで幅広く対応可能です。</p>
-              <p class="service-card__text">広告代理店での経験を生かし、デザイン〜公開・運用まで責任を持ってサポートします。</p>
+              <p class="service-card__text">เราสร้างเว็บไซต์ตามวัตถุประสงค์ เช่น เว็บไซต์องค์กรและพอร์ตโฟลิโอ</p>
+              <p class="service-card__text">เราสามารถรองรับได้หลากหลายตั้งแต่เว็บไซต์ HTML แบบสถิต WordPress theme แบบกำหนดเอง ไปจนถึงการปรับแต่งเว็บไซต์ WordPress ที่มีอยู่</p>
+              <p class="service-card__text">เราใช้ประสบการณ์จากบริษัทโฆษณาในการสนับสนุนตั้งแต่การออกแบบไปจนถึงการเผยแพร่และการใช้งาน</p>
             </div>
           </li>
           <!-- コーディング代行 -->
           <li class="service-cards__item">
             <div class="service-card service-card--03">
               <h2 class="service-card__title">Coding</h2>
-              <h3 class="service-card__title-sub">コーディング代行</h3>
-              <p class="service-card__text">制作会社様・Webデザイナー様向けに、デザインカンプからの正確で保守性の高いコーディングを行います。</p>
-              <p class="service-card__text">CSS設計の原則を守り、再利用しやすく、長期運用にも耐えるコードを意識しています。</p>
-              <p class="service-card__text">小規模案件やポートフォリオ用コーディングなどもお気軽にご相談ください。</p>
+              <h3 class="service-card__title-sub">บริการเขียนโค้ดแทน</h3>
+              <p class="service-card__text">สำหรับบริษัทผลิตและนักออกแบบเว็บไซต์ เราดำเนินการเขียนโค้ดที่แม่นยำและบำรุงรักษาได้ง่ายจากไฟล์ออกแบบ</p>
+              <p class="service-card__text">เราให้ความสำคัญกับการเขียนโค้ดที่สามารถนำกลับมาใช้ใหม่ได้ง่ายและทนทานต่อการใช้งานระยะยาว ตามหลักการออกแบบ CSS</p>
+              <p class="service-card__text">เรายินดีรับงานขนาดเล็กและการเขียนโค้ดสำหรับพอร์ตโฟลิโอ</p>
             </div>
           </li>
           <!-- 翻訳サポート -->
           <li class="service-cards__item">
             <div class="service-card service-card--04">
               <h2 class="service-card__title">Translation</h2>
-              <h3 class="service-card__title-sub">翻訳サポート
-                <span class="service-card__title-sub--remark">（オプション）</span>
+              <h3 class="service-card__title-sub">บริการแปลภาษา
+                <span class="service-card__title-sub--remark">（ตัวเลือก）</span>
               </h3>
-              <p class="service-card__text">Webサイト内コンテンツの英語・タイ語翻訳を承ります。</p>
-              <p class="service-card__text">自然で読みやすく、文化的背景にも配慮した表現を心がけています。</p>
-              <p class="service-card__text">必要に応じた更新作業もサポート可能です（翻訳は文字数ベースでお見積もりします）。</p>
-              <p class="service-card__text">※英語・タイ語以外の言語の翻訳も相談に応じます。お気軽にお問い合わせください。</p>
+              <p class="service-card__text">เรารับแปลเนื้อหาเว็บไซต์เป็นภาษาอังกฤษและภาษาไทย</p>
+              <p class="service-card__text">เราให้ความสำคัญกับการแปลที่เป็นธรรมชาติ อ่านง่าย และคำนึงถึงบริบททางวัฒนธรรม</p>
+              <p class="service-card__text">เราสามารถสนับสนุนการอัปเดตตามความจำเป็น (การแปลคิดค่าบริการตามจำนวนตัวอักษร)</p>
+              <p class="service-card__text">※เรายินดีรับแปลภาษาอื่นๆ นอกเหนือจากภาษาอังกฤษและภาษาไทย กรุณาติดต่อเราเพื่อปรึกษา</p>
             </div>
           </li>
         </ul>
@@ -297,7 +297,7 @@ get_header();
         </h2>
       </div>
       <div class="service-details__text">
-        <p>นอกจากความรู้และทักษะทั่วไปที่จำเป็นสำหรับการสร้างเว็บไซต์แล้ว เรายังพยายามนำเครื่องมือและเทรนด์ IT ล่าสุดมาใช้เพื่อการผลิตที่ดีขึ้น</p>
+        <p>นอกจากความรู้และทักษะที่จำเป็นสำหรับการสร้างเว็บไซต์แล้ว เรายังพยายามนำเครื่องมือและเทรนด์ IT ล่าสุดมาใช้เพื่อการผลิตที่ดีขึ้น</p>
       </div>
       <div class="service-details__icon-wrapper">
         <ul class="service-details__items">
@@ -415,15 +415,15 @@ get_header();
           <dd>วันเสาร์ อาทิตย์ และวันหยุดนักขัตฤกษ์ (สามารถทำงานในวันหยุดได้ตามความเหมาะสมของงาน)</dd>
         </dl>
         <dl>
-          <dt>รูปแบบการทำงาน</dt>
-          <dd>ทำงานจากที่บ้านทั้งหมด และติดต่อผ่านออนไลน์</dd>
-        </dl>
-        <dl>
           <dt>วิธีการติดต่อ</dt>
           <dd>รองรับเครื่องมือออนไลน์ต่างๆ เช่น อีเมล LINE Chatwork Slack Zoom Google Meet เป็นต้น</dd>
         </dl>
         <dl>
-          <dt>อื่นๆ</dt>
+          <dt>วิธีการสื่อสาร</dt>
+          <dd>เรารับสื่อสารผ่านเครื่องมือออนไลน์ต่างๆ เช่น อีเมล LINE Chatwork Slack Zoom และ Google Meet เพื่อการสื่อสารของเรา</dd>
+        </dl>
+        <dl>
+          <dt>แล้อื่นๆ</dt>
           <dd>สามารถติดต่อผ่านอีเมล การโทรศัพท์ และการประชุมออนไลน์เป็นภาษาอังกฤษและภาษาไทยได้ สำหรับลูกค้าที่กำลังพิจารณาขยายธุรกิจไปยังประเทศไทยพร้อมกับการสร้างเว็บไซต์ หากมีพนักงานชาวไทยเข้าร่วมการประชุม เราสามารถช่วยแปลระหว่างภาษาญี่ปุ่นและภาษาไทยได้ กรุณาติดต่อเราเพื่อปรึกษา</dd>
         </dl>
       </div>
