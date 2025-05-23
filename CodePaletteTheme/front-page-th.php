@@ -18,8 +18,8 @@ get_header();
           </h2>
 
           <h3 class="top-fv__sub-copy">
-          นำความตั้งใจของคุณสู่โลกด้วยเว็บไซต์ที่สื่อสารได้อย่างแท้จริง<br>
-          ไม่ว่าจะเป็นการเขียนโค้ดหรือรองรับหลายภาษา ไว้วางใจให้เราดูแลได้ทั้งหมด
+            นำความตั้งใจของคุณสู่โลกด้วยเว็บไซต์ที่สื่อสารได้อย่างแท้จริง<br>
+            ไม่ว่าจะเป็นการเขียนโค้ดหรือรองรับหลายภาษา ไว้วางใจให้เราดูแลได้ทั้งหมด
           </h3>
           <!-- Contact ボタン（PC表示用） -->
           <div class="top-fv__btn top-fv__btn--left u-desktop">
@@ -54,38 +54,38 @@ get_header();
     <div class="concept__inner inner">
       <h2 class="service__section-title section-title">
         <span class="section-title__en">concept</span>
-        <span class="section-title__jp">理念</span>
+        <span class="section-title__jp">แนวคิด</span>
       </h2>
 
       <div class="concept__intro">
-        <p>Webサイトの多言語対応は、外国人のお客様だけのためのものではありません。</p>
-        <p>言葉だけでなく<span class="concept__highlight">「誰にでもわかりやすい構成や案内」</span>を見直すきっかけにもなり、<br class="u-desktop">
-          その結果、日本人のお客様にとっても親切で使いやすいサイトづくりにつながります。</p>
+        <p>การทำเว็บไซต์ให้รองรับหลายภาษานั้น ไม่ได้มีไว้เพื่อผู้ใช้งานชาวต่างชาติเท่านั้น</p>
+        <p>แต่ยังเป็นโอกาสในการทบทวน<span class="concept__highlight">“โครงสร้างและคำแนะนำที่เข้าใจง่ายสำหรับทุกคน”</span><br class="u-desktop">
+        ซึ่งจะนำไปสู่การสร้างเว็บไซต์ที่ใช้งานสะดวกและเป็นมิตรต่อผู้ใช้งานชาวญี่ปุ่นด้วยเช่นกัน</p>
       </div>
       <!-- コンセプトのカード -->
       <ul class="concept__points">
         <li>
-          外国のお客様にも<br>安心して利用いただける
+          ลูกค้าต่างชาติสามารถ<br>ใช้งานได้อย่างมั่นใจ
           <div class="concept__icon">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/globe.svg" alt="アイコン" width="100" height="100">
           </div>
         </li>
         <li>
-          スタッフの不安を減らし、<br>現場をスムーズに
+          ลดความกังวลของพนักงาน<br>และทำให้การทำงานราบรื่น
           <div class="concept__icon">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/staff.svg" alt="アイコン" width="100" height="100">
           </div>
         </li>
         <li>
-          多言語化をきっかけに<br>日本語サイトもより親切に
+          ใช้การรองรับหลายภาษาเป็นโอกาส<br>ในการปรับปรุงเว็บไซต์ภาษาญี่ปุ่นให้เป็นมิตรมากขึ้น
           <div class="concept__icon">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/website.svg" alt="アイコン" width="100" height="100">
           </div>
         </li>
       </ul>
       <p class="concept__summary">
-        単なる翻訳ではなく、文化や使いやすさを意識した
-        「伝わるサイトづくり」をサポートします。
+        ไม่ใช่แค่การแปล แต่เราสนับสนุนการสร้างเว็บไซต์ที่สื่อสารได้อย่างแท้จริง
+        โดยคำนึงถึงวัฒนธรรมและความสะดวกในการใช้งาน
       </p>
     </div>
   </section>
@@ -96,15 +96,15 @@ get_header();
       <!-- セクションタイトル -->
       <h2 class="works__section-title section-title">
         <span class="section-title__en">works</span>
-        <span class="section-title__jp">制作実績</span>
+        <span class="section-title__jp">ผลงาน</span>
       </h2>
       <div class="works__heading">
         <p>
-          制作実績の一例です。クリックすると詳細が開きます。<br>
-          何かご質問がございましたら、いつでもお問い合わせフォームよりご連絡ください。
+          นี่คือตัวอย่างผลงานของเรา คลิกเพื่อดูรายละเอียด<br>
+          หากมีคำถามใดๆ กรุณาติดต่อเราผ่านแบบฟอร์มติดต่อได้ทุกเมื่อ
         </p>
       </div>
-      <p class="works__heading--remark">※現在制作中の案件と、許可をいただいていない案件については掲載しておりません。</p>
+      <p class="works__heading--remark">※ไม่แสดงผลงานที่กำลังดำเนินการและผลงานที่ยังไม่ได้รับอนุญาตให้เผยแพร่</p>
 
       <!-- 制作実績一覧 -->
       <div class="works__contents-wrapper">
@@ -226,13 +226,13 @@ get_header();
 
       <h2 class="service__section-title section-title">
         <span class="section-title__en">service</span>
-        <span class="section-title__jp">サービス</span>
+        <span class="section-title__jp">บริการ</span>
       </h2>
 
       <div class="service__heading">
-        <p>コーディング・Webサイト制作・多言語対応を軸に、事業者様や制作者様の「あと一歩」をサポートします。</p>
-        <p class="service__heading--sub">制作会社様やデザイナー様の右腕として、また個人事業主様の良きパートナーとして、<br class="u-desktop">丁寧かつ柔軟にご要望にお応えいたします。</p>
-        <p class="service__heading--sub">また、英語・タイ語を含む多言語サイト制作においては、単なる翻訳ではなく、<br class="u-desktop">外国の方にも本当に伝わりやすく、使いやすい構成・デザインをご提案します。</p>
+        <p>เราสนับสนุนธุรกิจและผู้สร้างสรรค์ด้วยการเขียนโค้ด การสร้างเว็บไซต์ และการรองรับหลายภาษา</p>
+        <p class="service__heading--sub">เราพร้อมให้บริการอย่างละเอียดและยืดหยุ่นในฐานะผู้ช่วยของบริษัทผลิตและนักออกแบบ<br class="u-desktop">รวมถึงเป็นพาร์ทเนอร์ที่ดีสำหรับเจ้าของธุรกิจส่วนตัว</p>
+        <p class="service__heading--sub">สำหรับการสร้างเว็บไซต์หลายภาษา รวมถึงภาษาอังกฤษและภาษาไทย<br class="u-desktop">เราไม่เพียงแต่แปล แต่ยังเสนอโครงสร้างและการออกแบบที่เข้าใจง่ายและใช้งานสะดวกสำหรับผู้ใช้ต่างชาติ</p>
       </div>
 
       <div class="service__contents-wrapper">
@@ -293,11 +293,11 @@ get_header();
       <!-- スキル -->
       <div class="service-details__heading">
         <h2 class="service-details__title">
-          スキル<span>skills</span>
+          ทักษะ<span>skills</span>
         </h2>
       </div>
       <div class="service-details__text">
-        <p>Web制作に必要な一般的な知識・技術はもちろん、常に最新のITツールやトレンドを取り入れながら、より良い制作を心がけています。</p>
+        <p>นอกจากความรู้และทักษะทั่วไปที่จำเป็นสำหรับการสร้างเว็บไซต์แล้ว เรายังพยายามนำเครื่องมือและเทรนด์ IT ล่าสุดมาใช้เพื่อการผลิตที่ดีขึ้น</p>
       </div>
       <div class="service-details__icon-wrapper">
         <ul class="service-details__items">
@@ -357,13 +357,13 @@ get_header();
       <!-- コミュニケーション -->
       <div class="service-details__heading">
         <h2 class="service-details__title">
-          業務報告・連絡方法について<span>communication</span>
+          เกี่ยวกับการรายงานและวิธีการติดต่อ<span>communication</span>
         </h2>
       </div>
       <div class="service-details__text">
-        <p>国内外のお客様とスムーズにご連絡・お打ち合わせが可能です。</p>
-        <p>また、海外在住経験を活かし、英語・タイ語対応を含む海外案件にも柔軟に対応しています。</p>
-        <p>ご希望のツール（メール、チャット、オンラインミーティングなど）で対応いたしますので、お気軽にご相談ください。</p>
+        <p>เราสามารถติดต่อและประชุมกับลูกค้าทั้งในและต่างประเทศได้อย่างราบรื่น</p>
+        <p>นอกจากนี้ เรายังมีความยืดหยุ่นในการรับมือกับงานต่างประเทศ รวมถึงการรองรับภาษาอังกฤษและภาษาไทย โดยใช้ประสบการณ์การอาศัยในต่างประเทศ</p>
+        <p>เราสามารถใช้เครื่องมือที่คุณต้องการ (อีเมล แชท การประชุมออนไลน์ ฯลฯ) ได้ ดังนั้นกรุณาติดต่อเราเพื่อปรึกษา</p>
       </div>
 
       <div class="service-details__icon-wrapper">
@@ -403,28 +403,28 @@ get_header();
 
       <div class="service-details__list">
         <dl>
-          <dt>連絡可能時間</dt>
-          <dd>平日 9:00〜18:00 （その他の時間帯も事前にご相談いただければ柔軟に対応可能です）</dd>
+          <dt>เวลาที่สามารถติดต่อได้</dt>
+          <dd>วันธรรมดา 9:00-18:00 (สามารถปรับเปลี่ยนได้ตามความเหมาะสม หากแจ้งล่วงหน้า)</dd>
         </dl>
         <dl>
-          <dt>平均稼働時間</dt>
-          <dd>平日は概ねフルタイムで対応しております。繁忙期や案件状況により異なる場合は事前にご案内いたします。</dd>
+          <dt>เวลาทำงานเฉลี่ย</dt>
+          <dd>โดยทั่วไปเราทำงานเต็มเวลาในวันธรรมดา หากมีข้อแตกต่างเนื่องจากช่วงเวลาที่วุ่นวายหรือสถานการณ์ของงาน เราจะแจ้งให้ทราบล่วงหน้า</dd>
         </dl>
         <dl>
-          <dt>定休日</dt>
-          <dd>土日・祝日（案件の状況により、休日対応も可能ですのでご相談ください）</dd>
+          <dt>วันหยุด</dt>
+          <dd>วันเสาร์ อาทิตย์ และวันหยุดนักขัตฤกษ์ (สามารถทำงานในวันหยุดได้ตามความเหมาะสมของงาน)</dd>
         </dl>
         <dl>
-          <dt>勤務形態</dt>
-          <dd>完全在宅勤務にて、オンラインで対応しています。</dd>
+          <dt>รูปแบบการทำงาน</dt>
+          <dd>ทำงานจากที่บ้านทั้งหมด และติดต่อผ่านออนไลน์</dd>
         </dl>
         <dl>
-          <dt>連絡方法</dt>
-          <dd>メール、LINE、Chatwork、Slack、Zoom、Google Meetなど各種オンラインツールに対応しています。</dd>
+          <dt>วิธีการติดต่อ</dt>
+          <dd>รองรับเครื่องมือออนไลน์ต่างๆ เช่น อีเมล LINE Chatwork Slack Zoom Google Meet เป็นต้น</dd>
         </dl>
         <dl>
-          <dt>その他</dt>
-          <dd>英語・タイ語でのメールのやりとり、電話連絡、オンライン会議などが可能です。ウェブサイト制作と共に、タイへの事業拡大をご検討中のお客様など、会議にタイ人スタッフが入る場合は、会議中の日・タイ通訳のお手伝いなどもできますので、ぜひご相談ください。</dd>
+          <dt>อื่นๆ</dt>
+          <dd>สามารถติดต่อผ่านอีเมล การโทรศัพท์ และการประชุมออนไลน์เป็นภาษาอังกฤษและภาษาไทยได้ สำหรับลูกค้าที่กำลังพิจารณาขยายธุรกิจไปยังประเทศไทยพร้อมกับการสร้างเว็บไซต์ หากมีพนักงานชาวไทยเข้าร่วมการประชุม เราสามารถช่วยแปลระหว่างภาษาญี่ปุ่นและภาษาไทยได้ กรุณาติดต่อเราเพื่อปรึกษา</dd>
         </dl>
       </div>
 
@@ -436,36 +436,36 @@ get_header();
     <div class="about__inner inner">
       <h2 class="service__section-title section-title">
         <span class="section-title__en">about</span>
-        <span class="section-title__jp">私について</span>
+        <span class="section-title__jp">เกี่ยวกับฉัน</span>
       </h2>
       <!-- カード風プロフィール -->
       <div class="about__card">
         <figure class="about__card-image">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/naoko-profile.jpg" alt="鴨川直子の写真" width="400" height="400">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/naoko-profile.jpg" alt="รูปภาพของ Naoko Kamogawa" width="400" height="400">
         </figure>
 
         <div class="about__card-info">
-          <h3 class="about__name">鴨川直子<span>（かもがわ なおこ）</span></h3>
-          <p class="about__position">Web制作者・通訳・翻訳</p>
-          <p>広告代理店での営業・進行管理を経て、現在はWeb制作と翻訳を中心に活動中。</p>
-          <p>タイ・アメリカでの海外生活で培った多言語・多文化への理解を活かし、英語・タイ語を含むWebサイト制作を得意としています。</p>
-          <p>構成から翻訳・実装まで、ワンストップで対応可能です。</p>
-          <p>趣味は油絵やイラスト、手芸などのものづくり。</p>
+          <h3 class="about__name">Naoko Kamogawa<span>（かもがわ なおこ）</span></h3>
+          <p class="about__position">ผู้สร้างเว็บไซต์・ล่าม・นักแปล</p>
+          <p>หลังจากทำงานด้านการขายและการจัดการโครงการในบริษัทโฆษณา ปัจจุบันทำงานด้านการสร้างเว็บไซต์และการแปลเป็นหลัก</p>
+          <p>ใช้ความเข้าใจในหลายภาษาและวัฒนธรรมที่ได้จากการใช้ชีวิตในประเทศไทยและอเมริกา ในการสร้างเว็บไซต์ที่รองรับภาษาอังกฤษและภาษาไทย</p>
+          <p>สามารถรับผิดชอบได้ตั้งแต่การวางโครงสร้าง การแปล ไปจนถึงการพัฒนา</p>
+          <p>งานอดิเรกคือการวาดภาพสีน้ำ การวาดภาพประกอบ และงานฝีมือต่างๆ</p>
         </div>
       </div>
       <div class="about__my-skills my-skills">
         <ul class="my-skills__items">
           <li class="my-skills__item">
-            <h4>技術スキル</h4>
-            <p>HTML / CSS / JavaScript / jQuery / Sass / WordPress / GitHub など</p>
+            <h4>ทักษะทางเทคนิค</h4>
+            <p>HTML / CSS / JavaScript / jQuery / Sass / WordPress / GitHub เป็นต้น</p>
           </li>
           <li class="my-skills__item">
-            <h4>その他スキル・経験</h4>
+            <h4>ทักษะและประสบการณ์อื่นๆ</h4>
             <ul class="my-skills__others">
-              <li>英語・タイ語による翻訳・通訳経験</li>
-              <li>広告代理店での企画提案・プロジェクト管理経験</li>
-              <li>文化や言葉の違いに配慮した多言語Webサイトの制作</li>
-              <li>知的財産管理技能士3級などの資格保有</li>
+              <li>ประสบการณ์การแปลและล่ามภาษาอังกฤษและภาษาไทย</li>
+              <li>ประสบการณ์การเสนอแผนและการจัดการโครงการในบริษัทโฆษณา</li>
+              <li>การสร้างเว็บไซต์หลายภาษาที่คำนึงถึงความแตกต่างทางวัฒนธรรมและภาษา</li>
+              <li>มีใบรับรองเช่น Intellectual Property Management Skill Level 3</li>
             </ul>
           </li>
         </ul>
@@ -482,14 +482,14 @@ get_header();
           contact
         </span>
         <span class="section-title__jp">
-          お問い合わせ
+          ติดต่อเรา
         </span>
       </h2>
       <div class="contact__text-wrapper">
         <p>
-          ホームページ制作のご依頼やご相談、ご質問等がございましたら、お気軽にお問い合わせください。原則、72時間以内に返信いたします。
+          หากคุณต้องการขอรับบริการสร้างเว็บไซต์ มีคำถาม หรือต้องการปรึกษา กรุณาติดต่อเรา เราจะตอบกลับภายใน 72 ชั่วโมง
         </p>
-        <p>返信が無い場合は、恐れ入りますが迷惑メールフォルダの中をご確認お願いいたします。</p>
+        <p>หากไม่ได้รับคำตอบ กรุณาตรวจสอบในโฟลเดอร์อีเมลขยะ</p>
       </div>
       <!-- お問い合わせフォーム -->
       <?php echo do_shortcode('[contact-form-7 id="27928e8" title="お問い合わせ"]'); ?>
@@ -500,7 +500,7 @@ get_header();
   <!-- TOPへ戻るボタン -->
   <a href="#top" class="js-button-to-top button-to-top">
     <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-symbol.png" alt="Logo" width="48" height="48">
-    <span>TOPへ<br>もどる</span>
+    <span>กลับขึ้น<br>ด้านบน</span>
   </a>
 </main>
 <?php get_footer(); ?>
