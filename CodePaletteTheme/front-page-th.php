@@ -33,15 +33,15 @@ get_header();
           <div class="swiper-wrapper">
             <picture class="swiper-slide">
               <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/world.svg" media="(min-width: 768px)">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/world.svg" alt="地球儀と女性のイラスト" width="1200" height="800">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/world.svg" alt="ภาพประกอบโลกและผู้หญิง" width="1200" height="800">
             </picture>
             <picture class="swiper-slide">
               <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pair-programming.svg" media="(min-width: 768px)">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pair-programming.svg" alt="二人でPCの前に座っている画像" width="1200" height="800">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pair-programming.svg" alt="ภาพคนสองคนนั่งหน้าคอมพิวเตอร์" width="1200" height="800">
             </picture>
             <picture class="swiper-slide">
               <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/coding.svg" media="(min-width: 768px)">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/coding.svg" alt="女性がコーディングをしている画像" width="1200" height="800">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/coding.svg" alt="ภาพผู้หญิงกำลังเขียนโค้ด" width="1200" height="800">
             </picture>
           </div>
         </div>
@@ -67,19 +67,19 @@ get_header();
         <li>
           ลูกค้าต่างชาติสามารถ<br>ใช้งานได้อย่างมั่นใจ
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/globe.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/globe.svg" alt="ไอคอนโลก" width="100" height="100">
           </div>
         </li>
         <li>
           ลดความกังวลของพนักงาน<br>และทำให้การทำงานราบรื่น
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/staff.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/staff.svg" alt="ไอคอนพนักงาน" width="100" height="100">
           </div>
         </li>
         <li>
           ใช้การรองรับหลายภาษาเป็นโอกาส<br>ในการปรับปรุงเว็บไซต์ภาษาญี่ปุ่นให้เป็นมิตรมากขึ้น
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/website.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/website.svg" alt="ไอคอนเว็บไซต์" width="100" height="100">
           </div>
         </li>
       </ul>
@@ -303,52 +303,52 @@ get_header();
         <ul class="service-details__items">
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-html-5.svg" alt="htmlのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-html-5.svg" alt="ไอคอน HTML5" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-css-3.svg" alt="cssのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-css-3.svg" alt="ไอคอน CSS3" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-jquery.svg" alt="jQueryのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-jquery.svg" alt="ไอคอน jQuery" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-javascript.svg" alt="javascriptのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-javascript.svg" alt="ไอคอน JavaScript" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-wordpress.svg" alt="WordPressのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-wordpress.svg" alt="ไอคอน WordPress" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-sass.svg" alt="Sassのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-sass.svg" alt="ไอคอน Sass" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-figma.svg" alt="Figmaのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-figma.svg" alt="ไอคอน Figma" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-github.svg" alt="GitHubのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-github.svg" alt="ไอคอน GitHub" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-filezilla.svg" alt="Filezillaのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-filezilla.svg" alt="ไอคอน FileZilla" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-gulp.svg" alt="gulpのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-gulp.svg" alt="ไอคอน Gulp" width="48" height="48">
             </figure>
           </li>
         </ul>
@@ -370,32 +370,32 @@ get_header();
         <ul class="service-details__items">
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-mail.svg" alt="mailのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-mail.svg" alt="ไอคอนอีเมล" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-line.png" alt="lineのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-line.png" alt="ไอคอน LINE" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-chatwork.svg" alt="chatworkのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-chatwork.svg" alt="ไอคอน Chatwork" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-slack.svg" alt="slackのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-slack.svg" alt="ไอคอน Slack" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-zoom.svg" alt="zoomのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-zoom.svg" alt="ไอคอน Zoom" width="48" height="48">
             </figure>
           </li>
           <li class="service-details__item">
             <figure class="service-details__image">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-google-meet.svg" alt="meetのアイコン" width="48" height="48">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/icon-google-meet.svg" alt="ไอคอน Google Meet" width="48" height="48">
             </figure>
           </li>
         </ul>
@@ -499,7 +499,7 @@ get_header();
   </section>
   <!-- TOPへ戻るボタン -->
   <a href="#top" class="js-button-to-top button-to-top">
-    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-symbol.png" alt="Logo" width="48" height="48">
+    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-symbol.png" alt="โลโก้" width="48" height="48">
     <span>กลับขึ้น<br>ด้านบน</span>
   </a>
 </main>

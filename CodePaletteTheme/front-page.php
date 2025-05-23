@@ -63,19 +63,19 @@
         <li>
           外国のお客様にも<br>安心して利用いただける
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/globe.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/globe.svg" alt="地球のアイコン" width="100" height="100">
           </div>
         </li>
         <li>
           スタッフの不安を減らし、<br>現場をスムーズに
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/staff.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/staff.svg" alt="スタッフのアイコン" width="100" height="100">
           </div>
         </li>
         <li>
           多言語化をきっかけに<br>日本語サイトもより親切に
           <div class="concept__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/website.svg" alt="アイコン" width="100" height="100">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/website.svg" alt="ウェブサイトのアイコン" width="100" height="100">
           </div>
         </li>
       </ul>
