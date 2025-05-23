@@ -162,7 +162,7 @@ get_header();
               <div class="works-modal__container">
                 <h2 class="works-modal__heading">
                   <span class="works-modal__heading-en">Works</span>
-                  <span class="works-modal__heading-jp">制作実績詳細</span>
+                  <span class="works-modal__heading-jp">รายละเอียดผลการผลิต</span>
                 </h2>
                 <div class="works-modal__card">
                   <figure class="works-modal__image-wrapper">
