@@ -72,7 +72,7 @@ add_action('wp_enqueue_scripts', 'add_theme_scripts');
 /* --------------------------------------------
 /* // ログイン中でも管理バーを非表示にする
 /* -------------------------------------------- */
-// add_filter('show_admin_bar', '__return_false');
+add_filter('show_admin_bar', '__return_false');
 
 
 /* --------------------------------------------
@@ -140,4 +140,5 @@ add_filter('template_include', 'custom_front_page_template');
 /* --------------------------------------------
 /* 
 /* -------------------------------------------- */
+
 

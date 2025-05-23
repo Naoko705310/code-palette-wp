@@ -492,7 +492,7 @@ get_header();
         <p>หากไม่ได้รับคำตอบ กรุณาตรวจสอบในโฟลเดอร์อีเมลขยะ</p>
       </div>
       <!-- お問い合わせフォーム -->
-      <?php echo do_shortcode('[contact-form-7 id="27928e8" title="お問い合わせ"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="94a41de" title="お問い合わせフォーム_Thai"]'); ?>
 
 
     </div>

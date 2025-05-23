@@ -492,7 +492,8 @@ get_header();
         <p>If you don't receive a response, please check your spam folder.</p>
       </div>
       <!-- お問い合わせフォーム -->
-      <?php echo do_shortcode('[contact-form-7 id="27928e8" title="お問い合わせ"]'); ?>
+
+      <?php echo do_shortcode('[contact-form-7 id="310c7c5" title="お問い合わせフォーム_English"]'); ?>
 
 
     </div>
