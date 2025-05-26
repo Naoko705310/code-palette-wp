@@ -53,6 +53,23 @@
   transform: translateY(-50%);
 }
 
+// 下矢印
+.lang-switcher__toggle::after {
+  content: "";
+  display: inline-block;
+  width: rem(24);
+  height: rem(24);
+  margin-left: rem(8);
+  background-image: url("../images/common/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  transition: background-image 0.2s;
+}
+
+.lang-switcher-dropdown:hover .lang-switcher__toggle::after {
+  background-image: url("../images/common/arrow-down-white.png");
+}
 
 // トグルが開いた時のテキストメニュー
 .lang-switcher__menu {
@@ -71,7 +88,7 @@
 
 .lang-switcher__item a {
   display: block;
-  padding: rem(8) rem(24);
+  padding: rem(8) rem(40);
   text-decoration: none;
   color: $color-font;
 }

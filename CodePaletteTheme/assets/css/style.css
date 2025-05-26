@@ -529,6 +529,7 @@ a {
 .input-email::-moz-placeholder,
 .input-tel::-moz-placeholder,
 .textarea-box::-moz-placeholder {
+	color: #CCCCCC;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -538,6 +539,7 @@ a {
 .input-email::placeholder,
 .input-tel::placeholder,
 .textarea-box::placeholder {
+	color: #CCCCCC;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -943,6 +945,23 @@ a {
 	width: 1.25rem;
 }
 
+.lang-switcher__toggle::after {
+	background-image: url("../images/common/arrow-down.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: inline-block;
+	height: 1.5rem;
+	margin-left: 0.5rem;
+	transition: background-image 0.2s;
+	vertical-align: middle;
+	width: 1.5rem;
+}
+
+.lang-switcher-dropdown:hover .lang-switcher__toggle::after {
+	background-image: url("../images/common/arrow-down-white.png");
+}
+
 .lang-switcher__menu {
 	background: #f5f5f5;
 	border: 1px solid #ccc;
@@ -962,7 +981,7 @@ a {
 	-webkit-text-decoration: none;
 	color: #615F5F;
 	display: block;
-	padding: 0.5rem 1.5rem;
+	padding: 0.5rem 2.5rem;
 	text-decoration: none;
 }
 

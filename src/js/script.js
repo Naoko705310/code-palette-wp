@@ -203,7 +203,9 @@ $('.button--to-works-list').on('click', function (e) {
   /* --------------------------------------------
   /* お問い合わせフォーム（バリデーション）
   /* -------------------------------------------- */
-  // ContactForm7で実装するので、一旦コメントアウト
+
+  // ContactForm7では、以下のjQueryでは制御できない。
+
   // function validateForm() {
   //   let hasError = false;
 
