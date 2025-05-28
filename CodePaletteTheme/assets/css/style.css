@@ -694,6 +694,15 @@ a {
 }
 
 /* ============================================
+/* 同意する
+/* ============================================ */
+
+.contact-form__field.checkbox-group .wpcf7-form-control-wrap[data-name=acceptance-privacy] label {
+	display: inline-block;
+	margin-top: 0.625rem;
+}
+
+/* ============================================
 /* 送信ボタン
 /* ============================================ */
 
@@ -943,6 +952,23 @@ a {
 	width: 1.25rem;
 }
 
+.lang-switcher__toggle::after {
+	background-image: url("../images/common/arrow-down.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: inline-block;
+	height: 1.5rem;
+	margin-left: 0.5rem;
+	transition: background-image 0.2s;
+	vertical-align: middle;
+	width: 1.5rem;
+}
+
+.lang-switcher-dropdown:hover .lang-switcher__toggle::after {
+	background-image: url("../images/common/arrow-down-white.png");
+}
+
 .lang-switcher__menu {
 	background: #f5f5f5;
 	border: 1px solid #ccc;
@@ -962,7 +988,7 @@ a {
 	-webkit-text-decoration: none;
 	color: #615F5F;
 	display: block;
-	padding: 0.5rem 1.5rem;
+	padding: 0.5rem 2.5rem;
 	text-decoration: none;
 }
 

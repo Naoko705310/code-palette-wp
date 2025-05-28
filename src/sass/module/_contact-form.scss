@@ -246,6 +246,16 @@
 }
 
 /* ============================================
+/* 同意する
+/* ============================================ */
+.contact-form__field.checkbox-group .wpcf7-form-control-wrap[data-name="acceptance-privacy"] label {
+  margin-top: rem(10);
+  display: inline-block;
+}
+
+
+
+/* ============================================
 /* 送信ボタン
 /* ============================================ */
 .contact-form__button,
