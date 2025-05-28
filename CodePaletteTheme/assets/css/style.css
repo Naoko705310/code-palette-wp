@@ -199,6 +199,7 @@ a {
 }
 
 .about__name span {
+	display: block;
 	font-size: 1rem;
 }
 
@@ -529,6 +530,7 @@ a {
 .input-email::-moz-placeholder,
 .input-tel::-moz-placeholder,
 .textarea-box::-moz-placeholder {
+	color: #CCCCCC;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -538,6 +540,7 @@ a {
 .input-email::placeholder,
 .input-tel::placeholder,
 .textarea-box::placeholder {
+	color: #CCCCCC;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;

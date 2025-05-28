@@ -138,7 +138,18 @@ add_filter('template_include', 'custom_front_page_template');
 
 
 /* --------------------------------------------
-/* 
+/* お問い合わせフォーム「電話番号入力形式」のバリデーション
 /* -------------------------------------------- */
+add_filter('wpcf7_validate_tel*', 'custom_tel_validation', 10, 2);
+function custom_tel_validation($result, $tag) {
+    $name = $tag->name;
+    if ($name === 'tel') {
+        $value = isset($_POST[$name]) ? trim($_POST[$name]) : '';
+        if (!preg_match('/^\+\d{1,4}\s\d{6,15}$/', $value)) {
+            $result->invalidate($tag, '電話番号の形式が正しくありません。例: +66 123456789');
+        }
+    }
+    return $result;
+}
 
 
