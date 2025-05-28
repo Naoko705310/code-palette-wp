@@ -99,19 +99,21 @@ add_action('after_setup_theme', 'my_setup');
 /* --------------------------------------------
 /* 制作実績のカスタム投稿タイプ
 /* -------------------------------------------- */
-function custom_post_type() {
-  register_post_type('works',
-      array(
-          'labels' => array(
-              'name' => __('制作実績'),
-              'singular_name' => __('制作実績')
-          ),
-          'public' => true,
-          'has_archive' => true,
-          'menu_position' => 5,
-          'supports' => array('title', 'editor', 'thumbnail', 'excerpt'), // ← ここに excerpt を追加
-          'show_in_rest' => true, // Gutenbergを使う場合は必要
-      )
+function custom_post_type()
+{
+  register_post_type(
+    'works',
+    array(
+      'labels' => array(
+        'name' => __('制作実績'),
+        'singular_name' => __('制作実績')
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_position' => 5,
+      'supports' => array('title', 'editor', 'thumbnail', 'excerpt'), // ← ここに excerpt を追加
+      'show_in_rest' => true, // Gutenbergを使う場合は必要
+    )
   );
 }
 add_action('init', 'custom_post_type');
@@ -119,18 +121,20 @@ add_action('init', 'custom_post_type');
 /* --------------------------------------------
 /* 管理画面にカスタムフィールドの選択肢を表示する
 /* -------------------------------------------- */
-function enable_custom_fields_for_works() {
+function enable_custom_fields_for_works()
+{
   add_post_type_support('works', 'custom-fields');
 }
 add_action('init', 'enable_custom_fields_for_works');
 
-function custom_front_page_template($template) {
+function custom_front_page_template($template)
+{
   if (function_exists('pll_current_language') && is_front_page()) {
-      $lang = pll_current_language();
-      $new_template = locate_template(array("front-page-{$lang}.php"));
-      if (!empty($new_template)) {
-          return $new_template;
-      }
+    $lang = pll_current_language();
+    $new_template = locate_template(array("front-page-{$lang}.php"));
+    if (!empty($new_template)) {
+      return $new_template;
+    }
   }
   return $template;
 }
@@ -140,16 +144,17 @@ add_filter('template_include', 'custom_front_page_template');
 /* --------------------------------------------
 /* お問い合わせフォーム「電話番号入力形式」のバリデーション
 /* -------------------------------------------- */
-add_filter('wpcf7_validate_tel*', 'custom_tel_validation', 10, 2);
-function custom_tel_validation($result, $tag) {
-    $name = $tag->name;
-    if ($name === 'tel') {
-        $value = isset($_POST[$name]) ? trim($_POST[$name]) : '';
-        if (!preg_match('/^\+\d{1,4}\s\d{6,15}$/', $value)) {
-            $result->invalidate($tag, '電話番号の形式が正しくありません。例: +66 123456789');
-        }
-    }
-    return $result;
-}
+// 各国で入力形式が異なるので、一旦コメントアウト
 
-
+// add_filter('wpcf7_validate_tel*', 'custom_tel_validation', 10, 2);
+// function custom_tel_validation($result, $tag)
+// {
+//   $name = $tag->name;
+//   if ($name === 'tel') {
+//     $value = isset($_POST[$name]) ? trim($_POST[$name]) : '';
+//     if (!preg_match('/^\+\d{1,4}\s\d{6,15}$/', $value)) {
+//       $result->invalidate($tag, '電話番号の形式が正しくありません。例: +66 123456789');
+//     }
+//   }
+//   return $result;
+// }
