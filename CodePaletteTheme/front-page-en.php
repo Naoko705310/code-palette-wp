@@ -445,9 +445,7 @@ get_header();
         </figure>
 
         <div class="about__card-info">
-          <h3 class="about__name">Naoko Kamogawaspan
-            <span>（かもがわなおこ）</span>
-          </h3>
+          <h3 class="about__name">Naoko Kamogawa</h3>
           <p class="about__position">Web Developer, Interpreter & Translator</p>
           <p>After working in sales and project management at an advertising agency, I now focus on web development and translation.</p>
           <p>Drawing from my experience living in Thailand and the United States, I specialize in creating multilingual websites in English and Thai, leveraging my understanding of different languages and cultures.</p>
