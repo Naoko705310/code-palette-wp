@@ -158,3 +158,57 @@ add_filter('template_include', 'custom_front_page_template');
 //   }
 //   return $result;
 // }
+
+/* --------------------------------------------
+/* Contact Form 7 送信後のリダイレクト
+// お問い合わせ完了ページに遷移
+/* -------------------------------------------- */
+add_action('wp_footer', 'cf7_redirect_by_form_id');
+function cf7_redirect_by_form_id() {
+?>
+  <script>
+    document.addEventListener('wpcf7mailsent', function(event) {
+      switch(event.detail.contactFormId) {
+        case '27928e8': // 日本語フォーム
+          location.replace('<?php echo esc_url(home_url('/contact-thanks')); ?>');
+          break;
+        case '310c7c5': // 英語フォーム
+          location.replace('<?php echo esc_url(home_url('/en/contact-thanks-en')); ?>');
+          break;
+        case '94a41de': // タイ語フォーム
+          location.replace('<?php echo esc_url(home_url('/th/contact-thanks-th')); ?>');
+          break;
+      }
+    }, false);
+  </script>
+<?php
+}
+
+
+
+
+
+// add_action('wp_footer', 'add_cf7_redirect_script');
+// function add_cf7_redirect_script()
+// {
+//   if (function_exists('pll_current_language')) {
+//     $lang = pll_current_language();
+//     // 言語ごとにリダイレクト先を分岐
+//     if ($lang === 'en') {
+//       $redirect_url = home_url('/contact-thanks-en/');
+//     } elseif ($lang === 'th') {
+//       $redirect_url = home_url('/contact-thanks-th/');
+//     } else {
+//       $redirect_url = home_url('/contact-thanks/');
+//     }
+//   } else {
+//     $redirect_url = home_url('/contact-thanks/');
+//   }
+// ?>
+//   <script>
+//     document.addEventListener('wpcf7mailsent', function(event) {
+//       location = '<?php echo esc_url($redirect_url); ?>';
+//     }, false);
+//   </script>
+// <?php
+// }
