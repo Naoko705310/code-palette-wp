@@ -183,32 +183,3 @@ function cf7_redirect_by_form_id() {
   </script>
 <?php
 }
-
-
-
-
-
-// add_action('wp_footer', 'add_cf7_redirect_script');
-// function add_cf7_redirect_script()
-// {
-//   if (function_exists('pll_current_language')) {
-//     $lang = pll_current_language();
-//     // 言語ごとにリダイレクト先を分岐
-//     if ($lang === 'en') {
-//       $redirect_url = home_url('/contact-thanks-en/');
-//     } elseif ($lang === 'th') {
-//       $redirect_url = home_url('/contact-thanks-th/');
-//     } else {
-//       $redirect_url = home_url('/contact-thanks/');
-//     }
-//   } else {
-//     $redirect_url = home_url('/contact-thanks/');
-//   }
-// ?>
-//   <script>
-//     document.addEventListener('wpcf7mailsent', function(event) {
-//       location = '<?php echo esc_url($redirect_url); ?>';
-//     }, false);
-//   </script>
-// <?php
-// }
