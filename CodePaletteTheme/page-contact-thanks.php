@@ -17,9 +17,9 @@
           また、ご記入頂いたメールアドレスへ、<br class="u-mobile">
           自動返信の確認メールをお送りしております。
         </p>
-        <!-- トップぺ戻る -->
+        <!-- トップへ戻る -->
         <div class="page-contact-thanks__btn">
-          <a href="https://naoko-test.site/code-palette/" class="button">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="button">
             <span>TOPへもどる</span>
           </a>
         </div>

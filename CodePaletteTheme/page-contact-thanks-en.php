@@ -23,8 +23,8 @@ Template Name: Contact Thanks English
         </p>
         <!-- Return to Top -->
         <div class="page-contact-thanks__btn">
-          <a href="https://naoko-test.site/code-palette/en/" class="button">
-            <span>Return to TOP</span>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="button">
+            <span>Return to the Top page</span>
           </a>
         </div>
       </div>

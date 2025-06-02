@@ -23,7 +23,7 @@ Template Name: Contact Thanks Thai
         </p>
         <!-- กลับสู่หน้าแรก -->
         <div class="page-contact-thanks__btn">
-          <a href="https://naoko-test.site/code-palette/th/" class="button">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="button">
             <span>กลับสู่หน้าแรก</span>
           </a>
         </div>
