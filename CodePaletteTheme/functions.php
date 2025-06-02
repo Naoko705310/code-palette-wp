@@ -161,7 +161,7 @@ add_filter('template_include', 'custom_front_page_template');
 
 /* --------------------------------------------
 /* Contact Form 7 送信後のリダイレクト
-// お問い合わせ完了ページに遷移
+/* お問い合わせ完了ページに遷移
 /* -------------------------------------------- */
 add_action('wp_footer', 'cf7_redirect_by_form_id');
 function cf7_redirect_by_form_id() {
@@ -169,13 +169,13 @@ function cf7_redirect_by_form_id() {
   <script>
     document.addEventListener('wpcf7mailsent', function(event) {
       switch(event.detail.contactFormId) {
-        case '27928e8': // 日本語フォーム
+        case 41: // 日本語フォーム（投稿IDが 41）
           location.replace('<?php echo esc_url(home_url('/contact-thanks')); ?>');
           break;
-        case '310c7c5': // 英語フォーム
+        case 87: // 英語フォーム（投稿IDが 87）
           location.replace('<?php echo esc_url(home_url('/en/contact-thanks-en')); ?>');
           break;
-        case '94a41de': // タイ語フォーム
+        case 88: // タイ語フォーム（投稿IDが 88）
           location.replace('<?php echo esc_url(home_url('/th/contact-thanks-th')); ?>');
           break;
       }
@@ -183,3 +183,4 @@ function cf7_redirect_by_form_id() {
   </script>
 <?php
 }
+
