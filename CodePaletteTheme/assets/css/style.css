@@ -1659,6 +1659,11 @@ a {
 	width: 100%;
 }
 
+.works-card__image-wrapper.works-card__image-wrapper--rara img {
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
 .works-card__body {
 	color: #615F5F;
 	display: flex;

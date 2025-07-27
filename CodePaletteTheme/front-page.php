@@ -117,7 +117,7 @@
               <?php $modal_id = 'modal-' . get_the_ID(); ?>
               <li class="works__item">
                 <a href="#" class="works-card js-works-modal-open" data-modal-id="<?php echo $modal_id; ?>">
-                  <figure class="works-card__image-wrapper">
+                  <figure class="works-card__image-wrapper<?php echo (get_the_ID() == 73) ? ' works-card__image-wrapper--rara' : ''; ?>">
                     <?php
                     if (has_post_thumbnail()) {
                       the_post_thumbnail('large');
@@ -161,7 +161,7 @@
                   <span class="works-modal__heading-jp">制作実績詳細</span>
                 </h2>
                 <div class="works-modal__card">
-                  <figure class="works-modal__image-wrapper">
+                  <figure class="works-modal__image-wrapper<?php echo (get_the_ID() == 73) ? ' works-modal__image-wrapper--rara' : ''; ?>">
                     <?php
                     if (has_post_thumbnail()) {
                       the_post_thumbnail('large');

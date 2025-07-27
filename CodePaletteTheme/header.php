@@ -51,11 +51,11 @@
       <nav class="header__sp-nav sp-nav js-drawer-menu">
         <div class="sp-nav__item-wrapper">
           <ul class="sp-nav__items">
-            <li class="sp-nav__item"><a href="#works">works <span>制作実績</span></a></li>
-            <li class="sp-nav__item"><a href="#concept">concept <span>理念</span></a></li>
-            <li class="sp-nav__item"><a href="#service">service <span>サービス</span></a></li>
-            <li class="sp-nav__item"><a href="#about">about <span>私について</span></a></li>
-            <li class="sp-nav__item"><a href="#contact">contact <span>お問い合わせ</span></a></li>
+            <li class="sp-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#works'); ?>">works <span>制作実績</span></a></li>
+            <li class="sp-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#concept'); ?>">concept <span>理念</span></a></li>
+            <li class="sp-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#service'); ?>">service <span>サービス</span></a></li>
+            <li class="sp-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#about'); ?>">about <span>私について</span></a></li>
+            <li class="sp-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#contact'); ?>">contact <span>お問い合わせ</span></a></li>
           </ul>
         </div>
       </nav>
@@ -63,11 +63,11 @@
       <!-- PCナビ -->
       <nav class="header__pc-nav pc-nav u-desktop">
         <ul class="pc-nav__items">
-          <li class="pc-nav__item"><a href="#works">works <span>制作実績</span></a></li>
-          <li class="pc-nav__item"><a href="#concept">concept <span>理念</span></a></li>
-          <li class="pc-nav__item"><a href="#service">service <span>サービス</span></a></li>
-          <li class="pc-nav__item"><a href="#about">about <span>私について</span></a></li>
-          <li class="pc-nav__item"><a href="#contact">contact <span>お問い合わせ</span></a></li>
+          <li class="pc-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#works'); ?>">works <span>制作実績</span></a></li>
+          <li class="pc-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#concept'); ?>">concept <span>理念</span></a></li>
+          <li class="pc-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#service'); ?>">service <span>サービス</span></a></li>
+          <li class="pc-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#about'); ?>">about <span>私について</span></a></li>
+          <li class="pc-nav__item"><a href="<?php echo esc_url(pll_home_url() . '#contact'); ?>">contact <span>お問い合わせ</span></a></li>
         </ul>
       </nav>
 

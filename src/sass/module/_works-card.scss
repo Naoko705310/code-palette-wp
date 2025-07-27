@@ -44,6 +44,11 @@
   object-fit: cover;
 }
 
+// raraクラス用のスタイル
+.works-card__image-wrapper.works-card__image-wrapper--rara img {
+  object-fit: contain;
+}
+
 .works-card__body {
   width: 100%;
   font-family: $base-font-family;
