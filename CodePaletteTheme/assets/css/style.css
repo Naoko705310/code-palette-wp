@@ -1822,6 +1822,11 @@ body.works-modal__open {
 	width: 80%;
 }
 
+.works-modal__image-wrapper.works-modal__image-wrapper--rara img {
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
 .works-modal__card h3 {
 	color: #615F5F;
 	font-family: "Noto Sans JP", sans-serif;
