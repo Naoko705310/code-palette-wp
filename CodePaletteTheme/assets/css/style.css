@@ -1794,27 +1794,17 @@ body.works-modal__open {
 }
 
 .works-modal__image-wrapper {
-	position: relative;
-}
-
-.works-modal__image-wrapper::before {
-	content: "";
-	display: block;
-	padding-top: 50%;
+	aspect-ratio: 1100/630;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
 }
 
 .works-modal__image-wrapper img {
 	-o-object-fit: cover;
-	border-radius: 0.5rem;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 	height: 100%;
-	left: 50%;
-	max-width: 100%;
 	object-fit: cover;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 80%;
+	width: 100%;
 }
 
 .works-modal__image-wrapper.works-modal__image-wrapper--rara img {
@@ -2145,14 +2135,6 @@ html {
 .works-modal__heading-en {
 	font-size: 2.5rem;
 	line-height: 1;
-}
-
-.works-modal__image-wrapper::before {
-	padding-top: 40%;
-}
-
-.works-modal__image-wrapper img {
-	max-width: 60%;
 }
 
 .works-modal__card h3 {

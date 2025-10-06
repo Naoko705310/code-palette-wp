@@ -120,33 +120,16 @@ body.works-modal__open {
 }
 
 .works-modal__image-wrapper {
-  position: relative;
-}
-
-.works-modal__image-wrapper::before {
-  content: "";
-  display: block;
-  padding-top: 50%;
-
-  @include mq(md) {
-    padding-top: 40%;
-  }
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  aspect-ratio: 1100 / 630;
 }
 
 .works-modal__image-wrapper img {
-  width: 80%;
-  max-width: 100%;
+  width: 100%;//imgタグにwidthを指定しているため
   height: 100%;
-  border-radius: rem(8);
-  position: absolute;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   object-fit: cover;
-  @include mq(md) {
-    max-width: 60%;
-  }
 }
 
 .works-modal__image-wrapper.works-modal__image-wrapper--rara img {
