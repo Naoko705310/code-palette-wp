@@ -1616,7 +1616,6 @@ a {
 }
 
 .works-card {
-	border-radius: 1.25rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 	display: block;
 	display: flex;
@@ -1626,10 +1625,6 @@ a {
 	text-align: center;
 	transition: ease 0.3s;
 	width: 100%;
-}
-
-.works-card__image-wrapper img {
-	border-radius: 1.25rem 1.25rem 0 0;
 }
 
 .works-card:hover {
@@ -1644,7 +1639,7 @@ a {
 .works-card__image-wrapper::before {
 	content: "";
 	display: block;
-	padding-top: 62.903%;
+	padding-top: 55%;
 }
 
 .works-card__image-wrapper img {

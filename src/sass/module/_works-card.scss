@@ -7,15 +7,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   transition: ease .3s;
-  border-radius: rem(20); 
+  // border-radius: rem(20); 
   overflow: hidden; //子要素はみ出し防止
   display: flex;
   flex-direction: column;
   height: 100%; 
-}
-
-.works-card__image-wrapper img {
-  border-radius: rem(20) rem(20) 0 0; 
 }
 
 .works-card:hover {
@@ -30,7 +26,7 @@
 .works-card__image-wrapper::before {
   content: "";
   display: block;
-  padding-top: 62.903%;// height/width
+  padding-top: 55%;//coverで配置した時にちょうど良い比率
 }
 
 .works-card__image-wrapper img {
