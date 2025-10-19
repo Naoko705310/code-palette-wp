@@ -75,18 +75,12 @@
 }
 
 /* ============================================
-/* チェックボックス
+/* チェックボックス（CF7・静的両対応版）
 /* ============================================ */
-// Contact form 7のCSS
-// チェックボックスのラベル（ボックスとテキスト）のコンテナ
-.wpcf7-list-item {
-  display: block;
-  margin-left: 0; //デフォルトの余白を消す
-  margin-bottom: rem(2);
-}
 
-// チェックボックスのラベル（ボックスとテキスト）
-.wpcf7-list-item label {
+/* チェックボックスの外側ラベル */
+.wpcf7-list-item label,
+.check-label {
   position: relative;
   display: flex;
   align-items: center;
@@ -94,13 +88,37 @@
   font-size: rem(16);
   color: $color-font;
   font-weight: $normal;
-  padding-left: rem(30); // チェックボックス分の余白
-  margin-bottom: rem(2);
+  padding-left: rem(30);
+  margin-bottom: rem(4);
   cursor: pointer;
 }
 
-// チェックボックスの枠
-.wpcf7-list-item input[type="checkbox"] + .wpcf7-list-item-label::before {
+/* チェックボックスのラッパー */
+.wpcf7-list-item,
+.checkbox-container {
+  display: block;
+  margin-left: 0;
+  margin-bottom: rem(2);
+}
+
+/* チェックボックス本体を非表示（見た目はカスタム枠で表現） */
+.wpcf7-list-item input[type="checkbox"],
+.check-label input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(20);
+  height: rem(20);
+  margin: 0;
+  opacity: 0; // 透明にするが操作可能
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* チェックボックスの枠 */
+.wpcf7-list-item input[type="checkbox"] + .wpcf7-list-item-label::before,
+.check-label input[type="checkbox"] + .check-label-span::before {
   content: "";
   display: inline-block;
   width: rem(20);
@@ -116,14 +134,16 @@
   transition: border-color 0.2s;
 }
 
-// フォーカス時の枠色
-.wpcf7-list-item input[type="checkbox"]:focus + .wpcf7-list-item-label::before {
+/* フォーカス時の枠色 */
+.wpcf7-list-item input[type="checkbox"]:focus + .wpcf7-list-item-label::before,
+.check-label input[type="checkbox"]:focus + .check-label-span::before {
   border-color: #3498db;
   outline: 2px solid #3498db;
 }
 
-// チェックマーク
-.wpcf7-list-item input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
+/* チェックマーク */
+.wpcf7-list-item input[type="checkbox"]:checked + .wpcf7-list-item-label::after,
+.check-label input[type="checkbox"]:checked + .check-label-span::after {
   content: "";
   display: block;
   position: absolute;
@@ -137,42 +157,11 @@
   z-index: 3;
 }
 
-
-.contact-form__privacy-text {
-  font-family: $base-font-family;
-  font-size: rem(14);
-  color: $color-font;
-  font-weight: $normal;
-  line-height: 1.5;
-    @include mq(md) {
-    font-size: rem(16);
-    }
-}
-.contact-form__privacy-text a {
-  font-family: $base-font-family;
-  font-size: rem(14);
-  color: $green;
-  font-weight: $bold;
-  line-height: 1.5;
-  border-bottom: 1px solid $green;
-    @include mq(md) {
-    font-size: rem(16);
-    }
+// チェックボックスのラベルの下の余白
+.contact-form__item dd {
+  margin-top: rem(10);
 }
 
-// input本体（透明化＆絶対配置）
-.wpcf7-list-item input[type="checkbox"] {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: rem(20);
-  height: rem(20);
-  margin: 0;
-  opacity: 0; // 透明にするが、タブ移動・フォーカスは有効
-  z-index: 2;
-  cursor: pointer;
-}
 
 /* ============================================
 /* セレクトボックス（お住まいの地域）
@@ -252,6 +241,14 @@
 .contact-form__field.checkbox-group .wpcf7-form-control-wrap[data-name="acceptance-privacy"] label {
   margin-top: rem(10);
   display: inline-block;
+}
+
+.contact-form__privacy-text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
 }
 
 

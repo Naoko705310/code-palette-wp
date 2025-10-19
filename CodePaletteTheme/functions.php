@@ -164,11 +164,12 @@ add_filter('template_include', 'custom_front_page_template');
 /* お問い合わせ完了ページに遷移
 /* -------------------------------------------- */
 add_action('wp_footer', 'cf7_redirect_by_form_id');
-function cf7_redirect_by_form_id() {
+function cf7_redirect_by_form_id()
+{
 ?>
   <script>
     document.addEventListener('wpcf7mailsent', function(event) {
-      switch(event.detail.contactFormId) {
+      switch (event.detail.contactFormId) {
         case 41: // 日本語フォーム（投稿IDが 41）
           location.replace('<?php echo esc_url(home_url('/contact-thanks')); ?>');
           break;
@@ -184,3 +185,94 @@ function cf7_redirect_by_form_id() {
 <?php
 }
 
+/* --------------------------------------------
+/* 投稿一覧に「複製」ボタンを追加
+/* -------------------------------------------- */
+// 投稿一覧のアクションに「複製」リンクを追加
+add_filter('post_row_actions', 'add_duplicate_post_link', 10, 2);
+add_filter('page_row_actions', 'add_duplicate_post_link', 10, 2);
+add_filter('works_row_actions', 'add_duplicate_post_link', 10, 2);
+
+function add_duplicate_post_link($actions, $post)
+{
+  if (current_user_can('edit_posts')) {
+    $duplicate_url = wp_nonce_url(
+      admin_url('admin.php?action=duplicate_post&post=' . $post->ID),
+      'duplicate_post_' . $post->ID,
+      'duplicate_nonce'
+    );
+    $actions['duplicate'] = '<a href="' . $duplicate_url . '" title="' . esc_attr__('この投稿を複製', 'textdomain') . '">' . __('複製', 'textdomain') . '</a>';
+  }
+  return $actions;
+}
+
+// 複製処理を実行
+add_action('admin_action_duplicate_post', 'duplicate_post_action');
+function duplicate_post_action()
+{
+  if (!(isset($_GET['post']) || isset($_POST['post']))) {
+    wp_die('複製する投稿が見つかりません。');
+  }
+
+  // セキュリティチェック
+  if (!wp_verify_nonce($_GET['duplicate_nonce'], 'duplicate_post_' . $_GET['post'])) {
+    wp_die('セキュリティチェックに失敗しました。');
+  }
+
+  if (!current_user_can('edit_posts')) {
+    wp_die('この操作を実行する権限がありません。');
+  }
+
+  $post_id = (isset($_GET['post']) ? absint($_GET['post']) : absint($_POST['post']));
+  $post = get_post($post_id);
+
+  if (!$post) {
+    wp_die('複製する投稿が見つかりません。');
+  }
+
+  // 新しい投稿を作成
+  $new_post_id = wp_insert_post(array(
+    'post_title'     => $post->post_title . ' (複製)',
+    'post_content'   => $post->post_content,
+    'post_excerpt'   => $post->post_excerpt,
+    'post_status'    => 'draft', // 下書きとして作成
+    'post_type'      => $post->post_type,
+    'post_author'    => get_current_user_id(),
+    'post_parent'    => $post->post_parent,
+    'menu_order'     => $post->menu_order,
+    'comment_status' => $post->comment_status,
+    'ping_status'    => $post->ping_status,
+  ));
+
+  if (is_wp_error($new_post_id)) {
+    wp_die('投稿の複製に失敗しました。');
+  }
+
+  // カスタムフィールドを複製
+  $meta_keys = get_post_custom_keys($post_id);
+  if ($meta_keys) {
+    foreach ($meta_keys as $meta_key) {
+      $meta_values = get_post_custom_values($meta_key, $post_id);
+      foreach ($meta_values as $meta_value) {
+        add_post_meta($new_post_id, $meta_key, $meta_value);
+      }
+    }
+  }
+
+  // タクソノミー（カテゴリー、タグなど）を複製
+  $taxonomies = get_object_taxonomies($post->post_type);
+  foreach ($taxonomies as $taxonomy) {
+    $post_terms = wp_get_object_terms($post_id, $taxonomy, array('fields' => 'slugs'));
+    wp_set_object_terms($new_post_id, $post_terms, $taxonomy, false);
+  }
+
+  // アイキャッチ画像を複製
+  if (has_post_thumbnail($post_id)) {
+    $thumbnail_id = get_post_thumbnail_id($post_id);
+    set_post_thumbnail($new_post_id, $thumbnail_id);
+  }
+
+  // 複製完了後、編集画面にリダイレクト
+  wp_redirect(admin_url('post.php?action=edit&post=' . $new_post_id));
+  exit;
+}

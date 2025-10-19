@@ -546,16 +546,13 @@ a {
 }
 
 /* ============================================
-/* チェックボックス
+/* チェックボックス（CF7・静的両対応版）
 /* ============================================ */
 
-.wpcf7-list-item {
-	display: block;
-	margin-bottom: 0.125rem;
-	margin-left: 0;
-}
+/* チェックボックスの外側ラベル */
 
-.wpcf7-list-item label {
+.wpcf7-list-item label,
+.check-label {
 	align-items: center;
 	color: #615F5F;
 	cursor: pointer;
@@ -563,12 +560,40 @@ a {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
-	margin-bottom: 0.125rem;
+	margin-bottom: 0.25rem;
 	padding-left: 1.875rem;
 	position: relative;
 }
 
-.wpcf7-list-item input[type=checkbox] + .wpcf7-list-item-label::before {
+/* チェックボックスのラッパー */
+
+.wpcf7-list-item,
+.checkbox-container {
+	display: block;
+	margin-bottom: 0.125rem;
+	margin-left: 0;
+}
+
+/* チェックボックス本体を非表示（見た目はカスタム枠で表現） */
+
+.wpcf7-list-item input[type=checkbox],
+.check-label input[type=checkbox] {
+	cursor: pointer;
+	height: 1.25rem;
+	left: 0;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.25rem;
+	z-index: 2;
+}
+
+/* チェックボックスの枠 */
+
+.wpcf7-list-item input[type=checkbox] + .wpcf7-list-item-label::before,
+.check-label input[type=checkbox] + .check-label-span::before {
 	background-color: #fff;
 	border: 1px solid #08AAC6;
 	border-radius: 0.25rem;
@@ -584,12 +609,18 @@ a {
 	z-index: 1;
 }
 
-.wpcf7-list-item input[type=checkbox]:focus + .wpcf7-list-item-label::before {
+/* フォーカス時の枠色 */
+
+.wpcf7-list-item input[type=checkbox]:focus + .wpcf7-list-item-label::before,
+.check-label input[type=checkbox]:focus + .check-label-span::before {
 	border-color: #3498db;
 	outline: 2px solid #3498db;
 }
 
-.wpcf7-list-item input[type=checkbox]:checked + .wpcf7-list-item-label::after {
+/* チェックマーク */
+
+.wpcf7-list-item input[type=checkbox]:checked + .wpcf7-list-item-label::after,
+.check-label input[type=checkbox]:checked + .check-label-span::after {
 	border-bottom: 2px solid #C94800;
 	border-left: 2px solid #C94800;
 	content: "";
@@ -603,34 +634,8 @@ a {
 	z-index: 3;
 }
 
-.contact-form__privacy-text {
-	color: #615F5F;
-	font-family: "Noto Sans JP", sans-serif;
-	font-size: 0.875rem;
-	font-weight: 400;
-	line-height: 1.5;
-}
-
-.contact-form__privacy-text a {
-	border-bottom: 1px solid #08AAC6;
-	color: #08AAC6;
-	font-family: "Noto Sans JP", sans-serif;
-	font-size: 0.875rem;
-	font-weight: 700;
-	line-height: 1.5;
-}
-
-.wpcf7-list-item input[type=checkbox] {
-	cursor: pointer;
-	height: 1.25rem;
-	left: 0;
-	margin: 0;
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 1.25rem;
-	z-index: 2;
+.contact-form__item dd {
+	margin-top: 0.625rem;
 }
 
 /* ============================================
@@ -702,6 +707,14 @@ a {
 .contact-form__field.checkbox-group .wpcf7-form-control-wrap[data-name=acceptance-privacy] label {
 	display: inline-block;
 	margin-top: 0.625rem;
+}
+
+.contact-form__privacy-text {
+	color: #615F5F;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
 }
 
 /* ============================================
@@ -1956,14 +1969,6 @@ html {
 
 .concept__summary {
 	font-size: 1.125rem;
-}
-
-.contact-form__privacy-text {
-	font-size: 1rem;
-}
-
-.contact-form__privacy-text a {
-	font-size: 1rem;
 }
 
 .select-container {
