@@ -58,6 +58,8 @@ get_header();
       </h2>
 
       <div class="concept__intro">
+        <p>With the growing demand for inbound tourism, websites are now accessed by users from a wide variety of backgrounds.
+        In addition to creating simple and easy-to-understand structures, the importance of accessibility and multilingual support that accommodate diverse users has become increasingly significant.</p>
         <p>Multilingual website support is not just for foreign customers.</p>
         <p>It's an opportunity to review not only language but also <span class="concept__highlight">"clear structure and guidance for everyone"</span>,<br class="u-desktop">
           resulting in creating websites that are friendly and easy to use for Japanese customers as well.</p>
