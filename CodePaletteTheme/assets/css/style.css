@@ -514,7 +514,8 @@ a {
 
 .input-text,
 .input-email,
-.input-tel {
+.input-tel,
+.select-box {
 	margin-top: 0.625rem;
 	padding: 0.625rem;
 	width: 100%;
